@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.name }}">
+  <meta property="og:description" content="{{ description or site.tagline }}">
+  <meta property="og:image" content="/assets/img/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/img/logo-180.png">
+  <link rel="apple-touch-icon" href="/assets/img/logo-180.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#page">Skip to content</a>
+
+  {% include "partials/topbar.njk" %}
+  {% include "partials/header.njk" %}
+
+  <main id="page">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

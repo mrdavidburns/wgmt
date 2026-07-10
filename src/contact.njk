@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+title: Free Estimate & Showroom
+description: Tell us about your project — we call back within one business day. Or visit the Ardmore showroom to see full-size slabs.
+permalink: /contact/
+---
+
+<div class="contact">
+  <div class="contact__form">
+    <span class="kicker">Free Estimate</span>
+    <h1 style="font-size:clamp(30px,4vw,42px)">Tell us about your project.</h1>
+    <p class="lede lede--sm">We&rsquo;ll call you back within one business day — usually the same afternoon.</p>
+
+    <form data-estimate-form data-thanks-url="/thanks/" action="https://formspree.io/f/{{ site.formspreeId }}" method="POST">
+      <div class="form-row" style="margin-bottom:22px">
+        <div class="field">
+          <label for="f-name">NAME</label>
+          <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Jane Delaney">
+        </div>
+        <div class="field">
+          <label for="f-phone">PHONE</label>
+          <input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(610) 555-0142">
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:22px">
+        <label id="ptype-label">PROJECT TYPE</label>
+        <div class="radio-chips" role="radiogroup" aria-labelledby="ptype-label">
+          {% set types = ["Kitchen counters", "Bath / vanity", "Cabinets", "Tile", "Commercial"] %}
+          {% for t in types %}
+            <input type="radio" id="pt-{{ loop.index }}" name="project_type" value="{{ t }}" {% if loop.first %}checked{% endif %}>
+            <label for="pt-{{ loop.index }}">{{ t }}</label>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="field" style="margin-bottom:22px">
+        <label for="f-more">TELL US MORE <span class="hint">(optional — rough size, stone you like, timing)</span></label>
+        <textarea id="f-more" name="message" rows="3" placeholder="About 45 sq ft, interested in Calacatta quartz…"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn--dark" type="submit">Request My Estimate</button>
+        <span class="or">or call <a href="{{ site.phoneHref }}">{{ site.phone }}</a></span>
+      </div>
+    </form>
+  </div>
+
+  <div class="contact__aside">
+    <span class="kicker kicker--light">The Showroom</span>
+    <div class="photo photo--wide" style="aspect-ratio:16/9">
+      <img src="/assets/img/showroom.webp" alt="WGMT showroom interior with slab displays and sample boards" loading="lazy">
+    </div>
+    <h2>Better yet — come see the slabs.</h2>
+    <div class="contact__info">
+      <div>
+        <span class="contact__info-label">ADDRESS</span>
+        {{ site.showroom.address1 }}<br>{{ site.showroom.address2 }}
+      </div>
+      <div>
+        <span class="contact__info-label">HOURS</span>
+        {{ site.showroom.hours1 }}<br>{{ site.showroom.hours2 }}
+      </div>
+      <div>
+        <span class="contact__info-label">PHONE</span>
+        {{ site.phone }}<br>Fax {{ site.fax }}
+      </div>
+      <div>
+        <span class="contact__info-label">FABRICATION SHOP</span>
+        {{ site.shop.address1 }}<br>{{ site.shop.note }}
+      </div>
+    </div>
+    <div class="contact__actions">
+      <a class="btn btn--light" href="{{ site.showroom.mapsUrl }}" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+    <p class="contact__note">Can&rsquo;t make it in? We shop-at-home too — we&rsquo;ll bring samples and ideas to you.</p>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+[
+  { "label": "Countertops", "url": "/countertops/" },
+  { "label": "Cabinets", "url": "/cabinets/" },
+  { "label": "Tile", "url": "/tile/" },
+  { "label": "Gallery", "url": "/gallery/" },
+  { "label": "Reviews", "url": "/reviews/" },
+  { "label": "About", "url": "/about/" }
+]

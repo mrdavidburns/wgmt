@@ -1,0 +1,23 @@
+{
+  "name": "Wholesale Granite Marble & Tile",
+  "shortName": "WGMT",
+  "tagline": "Granite, quartz, marble, and tile — fabricated in-house, installed with a lifetime warranty.",
+  "phone": "610-660-6565",
+  "phoneHref": "tel:6106606565",
+  "fax": "610-660-6564",
+  "email": "",
+  "formspreeId": "YOUR_FORM_ID",
+  "showroom": {
+    "address1": "130 E Lancaster Ave",
+    "address2": "Ardmore, PA 19003",
+    "hours1": "Mon–Fri 9–5 (Wed to 6)",
+    "hours2": "Sat 10–5 · Sun by appt",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wholesale+Granite+Marble+%26+Tile+130+E+Lancaster+Ave+Ardmore+PA"
+  },
+  "shop": {
+    "address1": "44 4th St, Lansdowne PA",
+    "note": "By appointment only"
+  },
+  "topbarNote": "Mon–Sat · Sun by appt",
+  "since": "2001"
+}

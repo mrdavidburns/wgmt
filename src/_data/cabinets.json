@@ -1,0 +1,13 @@
+{
+  "doorStyles": [
+    { "name": "Shaker", "desc": "Clean recessed panel — our most-requested door", "bg": "#e2ddd1,#dad5c8", "image": "" },
+    { "name": "Flat-Panel", "desc": "Slab door, handleless option for modern kitchens", "bg": "#d9d3c6,#d1cbbd", "image": "" },
+    { "name": "Raised Panel", "desc": "Traditional detail for full-overlay layouts", "bg": "#e4dfd3,#dcd7ca", "image": "" },
+    { "name": "Inset", "desc": "Furniture-grade, flush doors and drawers", "bg": "#ded8cb,#d6d0c2", "image": "" }
+  ],
+  "steps": [
+    { "num": "01", "title": "Measure & CAD", "desc": "We template your space and render the layout in 3D before anything is ordered." },
+    { "num": "02", "title": "Choose door & finish", "desc": "Pick a door style, wood species, and finish from samples in the showroom." },
+    { "num": "03", "title": "Build & install", "desc": "Cabinets arrive boxed and are installed alongside your countertops and tile." }
+  ]
+}

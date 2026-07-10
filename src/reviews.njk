@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Reviews & Testimonials
+description: 100+ five-star reviews across Yelp, Google, and HomeAdvisor from kitchen and bath installations around the Main Line.
+permalink: /reviews/
+---
+
+<div class="page-head">
+  <span class="kicker">Testimonials</span>
+  <h1>100+ five-star reviews across the Main Line.</h1>
+  <div class="review-sources">
+    <span>★★★★★&nbsp; Yelp</span>
+    <span>★★★★★&nbsp; Google</span>
+    <span>★★★★★&nbsp; HomeAdvisor</span>
+  </div>
+</div>
+
+{% set featured = reviews | selectattr("featured") | first %}
+<div class="review-featured">
+  <p class="review-featured__quote">&ldquo;{{ featured.quote }}&rdquo;</p>
+  <div class="review-featured__attr">{{ featured.author }} · {{ featured.location }} · {{ featured.source }}</div>
+</div>
+
+<div class="grid grid--3" style="padding:40px var(--pad-x) 56px">
+  {% for r in reviews %}
+    {% if not r.featured %}
+      <div class="review-card">
+        <span class="review-card__stars">★★★★★</span>
+        <p class="review-card__quote">&ldquo;{{ r.quote }}&rdquo;</p>
+        <span class="review-card__attr">{{ r.author }} · {{ r.location }} · {{ r.source }}</span>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% set cta = { text: "Your review could be next.", button: "Get a Free Estimate" } %}
+{% include "partials/cross-cta.njk" %}

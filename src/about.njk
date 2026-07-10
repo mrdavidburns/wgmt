@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+title: About Us
+description: Family-owned since 2001. In-house fabrication, one accountable crew, and a lifetime installation warranty from our Ardmore showroom.
+permalink: /about/
+---
+
+<div class="hero hero--short">
+  <div class="hero__copy" style="gap:22px">
+    <span class="kicker">About Us</span>
+    <h1>A wholesaler that shows up at your house.</h1>
+    <p class="lede" style="font-size:16px;max-width:46ch">Since {{ site.since }} we&rsquo;ve fabricated and installed stone across the Main Line from our Ardmore showroom. We buy slabs by the container and cut them in our own shop — so you get wholesale pricing and a single crew that&rsquo;s accountable start to finish.</p>
+    <p class="lede" style="font-size:16px;max-width:46ch">The owner still runs templates himself. That&rsquo;s why the seams line up and the estimate holds.</p>
+  </div>
+  <div class="hero__media">
+    <img src="/assets/img/showroom.webp" alt="WGMT showroom interior with slab displays and sample boards">
+  </div>
+</div>
+
+<div class="stats">
+  {% set stats = [["2001", "Serving the Main Line"], ["3", "Generations, family-owned"], ["100+", "Five-star reviews"], ["1", "Lifetime warranty"]] %}
+  {% for s in stats %}
+    <div class="stats__cell">
+      <span class="stats__num">{{ s[0] }}</span>
+      <span class="stats__label">{{ s[1] }}</span>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="section">
+  <h2 style="margin-bottom:36px">What we stand behind</h2>
+  <div class="grid grid--3" style="gap:40px">
+    {% set values = [
+      ["In-house fabrication", "Every slab is templated and cut in our own shop — no middleman, no markup."],
+      ["One accountable crew", "Counters, cabinets, and tile from the same team, on one schedule."],
+      ["Lifetime installation warranty", "We stand behind every install for as long as you own the home."]
+    ] %}
+    {% for v in values %}
+      <div class="value">
+        <h3>{{ v[0] }}</h3>
+        <p>{{ v[1] }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% set cta = { text: "Come meet us — the coffee’s on.", button: "Get Directions" } %}
+{% include "partials/cross-cta.njk" %}

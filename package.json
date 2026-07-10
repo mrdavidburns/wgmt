@@ -1,0 +1,15 @@
+{
+  "name": "wgmt",
+  "version": "1.0.0",
+  "description": "Wholesale Granite Marble & Tile — static site (Eleventy)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "build:pages": "PATH_PREFIX=/wgmt/ eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

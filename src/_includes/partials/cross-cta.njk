@@ -1,0 +1,5 @@
+{# Usage: {% set cta = { text: "...", button: "...", url: "/contact/" } %}{% include "partials/cross-cta.njk" %} #}
+<div class="cross-cta">
+  <span class="cross-cta__text">{{ cta.text }}</span>
+  <a class="btn btn--light" href="{{ cta.url or '/contact/' }}">{{ cta.button }}</a>
+</div>

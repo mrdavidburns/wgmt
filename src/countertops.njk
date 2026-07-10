@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+title: The Stone Library — Quartz, Granite & Marble Countertops
+description: Browse quartz, granite, marble, and natural stone slabs — every one on display full-size in our Ardmore showroom.
+permalink: /countertops/
+---
+
+<div class="page-head page-head--split">
+  <div>
+    <span class="kicker">The Stone Library</span>
+    <h1>Find your slab.</h1>
+  </div>
+  <p class="lede lede--sm" style="max-width:38ch">Every stone below is in our Ardmore showroom as a full-size slab. Save your favorites and we&rsquo;ll pull them for your visit.</p>
+</div>
+
+<div class="filterbar">
+  <div class="filterbar__chips" role="group" aria-label="Filter stones by type">
+    {% set filters = ["All", "Quartz", "Granite", "Marble", "Natural Stone"] %}
+    {% for f in filters %}
+      <button class="chip" data-filter="{{ f }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ f }}</button>
+    {% endfor %}
+  </div>
+  <span class="filterbar__count" data-stone-count>{{ stones | length }} stones</span>
+</div>
+
+<div class="grid grid--3 stone-grid">
+  {% for s in stones %}
+    <div class="card" data-stone-type="{{ s.type }}">
+      {% if s.image %}
+        <div class="photo">
+          <img src="{{ s.image }}" alt="{{ s.name }} slab" loading="lazy">
+          {% if s.inShowroom %}<span class="stone__badge">IN SHOWROOM</span>{% endif %}
+          <button class="stone__fav" data-stone="{{ s.name }}" aria-pressed="false" title="Save favorite" aria-label="Save {{ s.name }} as favorite">♡</button>
+        </div>
+      {% else %}
+        {% set c1 = s.bg.split(',') | first %}
+        {% set c2 = s.bg.split(',') | last %}
+        <div class="ph {% if s.dark %}ph--dark{% endif %}" style="background:repeating-linear-gradient(45deg, {{ c1 }}, {{ c1 }} 10px, {{ c2 }} 10px, {{ c2 }} 20px)">
+          <span>{{ s.name | lower }} slab</span>
+          {% if s.inShowroom %}<span class="stone__badge">IN SHOWROOM</span>{% endif %}
+          <button class="stone__fav" data-stone="{{ s.name }}" aria-pressed="false" title="Save favorite" aria-label="Save {{ s.name }} as favorite">♡</button>
+        </div>
+      {% endif %}
+      <div class="stone__head">
+        <span class="stone__name">{{ s.name }}</span>
+        <span class="stone__type">{{ s.type }}</span>
+      </div>
+      <span class="stone__desc">{{ s.color }} · {{ s.desc }}</span>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="cross-cta">
+  <span class="cross-cta__text" data-fav-banner>Tap ♡ to save favorites — we&rsquo;ll pull them for your visit.</span>
+  <a class="btn btn--light" href="/contact/">Plan a Showroom Visit</a>
+</div>

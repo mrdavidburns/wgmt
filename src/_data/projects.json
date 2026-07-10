@@ -1,0 +1,8 @@
+[
+  { "title": "Calacatta quartz counters", "location": "Wynnewood", "image": "/assets/img/project-calacatta.webp", "alt": "Calacatta quartz countertop with grey veining over white cabinets" },
+  { "title": "Master bath vanity", "location": "Haverford", "image": "/assets/img/project-bath.webp", "alt": "Double vanity with white quartz top and mother-of-pearl mosaic backsplash" },
+  { "title": "Granite island kitchen", "location": "Ardmore", "image": "/assets/img/project-granite-island.webp", "alt": "Grey granite island with flowers and brown glass tile backsplash" },
+  { "title": "Glass mosaic bath", "location": "Media", "image": "/assets/img/project-mosaic.webp", "alt": "Bathroom wrapped in aqua glass mosaic tile" },
+  { "title": "Stone fireplace surround", "location": "Villanova", "image": "/assets/img/project-fireplace.webp", "alt": "Fireplace surround in dramatic green-veined stone with matching hearth" },
+  { "title": "Commercial bar top", "location": "Philadelphia", "image": "/assets/img/project-bar.webp", "alt": "Curved commercial bar with dark stone top" }
+]

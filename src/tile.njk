@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Tile & Backsplash
+description: A full Daltile showroom plus natural stone and glass mosaics — set by the same crew that installs your counters.
+permalink: /tile/
+---
+
+<div class="page-head page-head--split">
+  <div>
+    <span class="kicker">Tile &amp; Backsplash</span>
+    <h1>The finishing layer.</h1>
+  </div>
+  <p class="lede lede--sm" style="max-width:40ch">A full Daltile showroom plus natural stone and glass mosaics — set by the same crew that installs your counters.</p>
+</div>
+
+<div class="grid grid--3" style="padding:8px var(--pad-x) 56px; gap:28px 20px">
+  {% for c in tile %}
+    <div class="card">
+      {% if c.image %}
+        <div class="photo"><img src="{{ c.image }}" alt="{{ c.alt }}" loading="lazy"></div>
+      {% else %}
+        {% set c1 = c.bg.split(',') | first %}
+        {% set c2 = c.bg.split(',') | last %}
+        <div class="ph" style="background:repeating-linear-gradient(45deg, {{ c1 }}, {{ c1 }} 10px, {{ c2 }} 10px, {{ c2 }} 20px)">
+          <span>{{ c.name | lower }} sample</span>
+        </div>
+      {% endif %}
+      <span class="card__title card__title--lg">{{ c.name }}</span>
+      <span class="card__meta" style="font-size:13px">{{ c.desc }}</span>
+    </div>
+  {% endfor %}
+</div>
+
+{% set cta = { text: "Bringing a backsplash idea? We’ll match it to your stone.", button: "Plan a Showroom Visit" } %}
+{% include "partials/cross-cta.njk" %}

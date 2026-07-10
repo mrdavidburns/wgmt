@@ -1,0 +1,8 @@
+[
+  { "name": "Porcelain & Ceramic", "desc": "Floors, walls, and wet areas — Daltile & more", "bg": "#dcd7ca,#d4cfc1", "image": "/assets/img/tile-porcelain.webp", "alt": "Porcelain tile sample" },
+  { "name": "Natural Stone", "desc": "Marble, travertine, and slate mosaics", "bg": "#d3cdbf,#cbc5b6", "image": "" },
+  { "name": "Glass Mosaic", "desc": "Backsplashes and accent bands", "bg": "#dad5c9,#d2cdbf", "image": "/assets/img/tile-glass-mosaic.webp", "alt": "Glass mosaic tile in mixed blues" },
+  { "name": "Large-Format", "desc": "Slab-look panels for seamless walls", "bg": "#e2ddd0,#dad5c7", "image": "" },
+  { "name": "Subway & Field", "desc": "Classic 3×6 and handmade-look tile", "bg": "#e5e0d4,#ddd8ca", "image": "" },
+  { "name": "Decorative & Trim", "desc": "Pencils, chair rails, and listellos", "bg": "#d7d1c4,#cfc9bb", "image": "" }
+]

@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Recent Work — Kitchens & Baths
+description: Recent countertop, cabinet, and tile installations around the Main Line.
+permalink: /gallery/
+---
+
+<div class="page-head">
+  <span class="kicker">Recent Work</span>
+  <h1>Kitchens &amp; baths around the Main Line.</h1>
+</div>
+
+<div class="featured">
+  <div class="photo photo--wide" style="aspect-ratio:auto;min-height:280px">
+    <img src="/assets/img/hero-kitchen.webp" alt="White shaker kitchen with quartz island, farmhouse sink, and pendant lighting">
+  </div>
+  <div class="featured__copy">
+    <span class="kicker" style="font-size:11px;letter-spacing:.2em">Featured · Main Line</span>
+    <h2 style="font-size:30px">Quartz island, full remodel</h2>
+    <p class="lede lede--sm" style="font-size:14.5px">Quartz counters, tile backsplash, CAD-designed cabinets. Templated to installed in eleven days.</p>
+    <div class="featured__tags">
+      <span>Quartz</span><span>·</span><span>Cabinets</span><span>·</span><span>Tile</span>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid--3" style="padding:40px var(--pad-x) 56px">
+  {% for p in projects %}
+    <div class="card">
+      <div class="photo photo--tall"><img src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></div>
+      <span class="card__title" style="font-size:17px">{{ p.title }} · {{ p.location }}</span>
+    </div>
+  {% endfor %}
+</div>
+
+{% set cta = { text: "Like what you see? Your kitchen is next.", button: "Get a Free Estimate" } %}
+{% include "partials/cross-cta.njk" %}

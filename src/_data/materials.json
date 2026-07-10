@@ -1,0 +1,6 @@
+[
+  { "name": "Quartz", "desc": "Low-maintenance, consistent", "image": "/assets/img/mat-quartz.webp", "alt": "Grey quartz island countertop" },
+  { "name": "Granite", "desc": "Our specialty, every color", "image": "/assets/img/mat-granite.webp", "alt": "Granite slabs on display" },
+  { "name": "Marble", "desc": "Carrara, Calacatta & more", "image": "/assets/img/mat-marble.webp", "alt": "Calacatta marble countertop edge detail" },
+  { "name": "Tile & Cabinets", "desc": "Daltile + CAD-designed", "image": "/assets/img/mat-tile.webp", "alt": "Glass mosaic tiled bathroom" }
+]

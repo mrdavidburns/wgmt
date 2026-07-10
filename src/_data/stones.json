@@ -1,0 +1,11 @@
+[
+  { "name": "Calacatta Laza", "type": "Quartz", "color": "White", "desc": "Bold grey veining · polished", "bg": "#e3ded4,#dbd6cb", "dark": false, "inShowroom": true, "image": "" },
+  { "name": "Absolute Black", "type": "Granite", "color": "Black", "desc": "Uniform · polished or honed", "bg": "#4a463f,#443f39", "dark": true, "inShowroom": true, "image": "" },
+  { "name": "Carrara White", "type": "Marble", "color": "White", "desc": "Soft grey veining · honed", "bg": "#e8e4db,#e0dcd2", "dark": false, "inShowroom": false, "image": "" },
+  { "name": "New Venetian Gold", "type": "Granite", "color": "Gold", "desc": "Warm speckle · polished", "bg": "#d3ccbe,#cbc4b5", "dark": false, "inShowroom": false, "image": "" },
+  { "name": "Frost White", "type": "Quartz", "color": "White", "desc": "Fine speckle · polished", "bg": "#dcd8cf,#d4d0c6", "dark": false, "inShowroom": false, "image": "" },
+  { "name": "Roman Travertine", "type": "Natural Stone", "color": "Beige", "desc": "Natural pitting · honed & filled", "bg": "#c9c0ae,#c1b8a5", "dark": false, "inShowroom": false, "image": "" },
+  { "name": "Steel Grey", "type": "Granite", "color": "Grey", "desc": "Fine leathered texture", "bg": "#c2beb6,#bab6ad", "dark": false, "inShowroom": false, "image": "" },
+  { "name": "Calacatta Gold", "type": "Marble", "color": "White", "desc": "Gold veining · polished", "bg": "#e6e1d6,#ded9cd", "dark": false, "inShowroom": true, "image": "" },
+  { "name": "Blanco Maple", "type": "Quartz", "color": "Cream", "desc": "Warm cream · matte", "bg": "#e4ded1,#dcd6c8", "dark": false, "inShowroom": false, "image": "" }
+]

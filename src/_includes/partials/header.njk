@@ -1,0 +1,17 @@
+<header class="header">
+  <a class="header__brand" href="/">
+    <img src="/assets/img/logo-180.png" alt="" width="54" height="54">
+    <span class="header__wordmark">{{ site.name }}</span>
+  </a>
+
+  <button class="header__toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="header__nav" id="site-nav">
+    {% for item in nav %}
+      <a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+    {% endfor %}
+    <a class="header__cta" href="/contact/" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Visit the Showroom</a>
+  </nav>
+</header>
