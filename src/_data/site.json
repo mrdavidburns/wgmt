@@ -6,7 +6,7 @@
   "phone": "610-660-6565",
   "phoneHref": "tel:6106606565",
   "fax": "610-660-6564",
-  "email": "",
+  "email": "cms-test@example.com",
   "formspreeId": "YOUR_FORM_ID",
   "showroom": {
     "address1": "130 E Lancaster Ave",
