@@ -7,18 +7,18 @@ permalink: /reviews/
 
 <div class="page-head">
   <span class="kicker">Testimonials</span>
-  <h1>100+ five-star reviews across the Main Line.</h1>
+  <h1>150+ reviews across the Main Line.</h1>
   <div class="review-sources">
-    <span>★★★★★&nbsp; Yelp</span>
-    <span>★★★★★&nbsp; Google</span>
-    <span>★★★★★&nbsp; HomeAdvisor</span>
+    <span>★ 4.9 &nbsp;Google (80+)</span>
+    <span>★ 5.0 &nbsp;Yelp (30+)</span>
+    <span>★ 4.7 &nbsp;HomeAdvisor (50+)</span>
   </div>
 </div>
 
 {% set featured = reviews | selectattr("featured") | first %}
 <div class="review-featured">
   <p class="review-featured__quote">&ldquo;{{ featured.quote }}&rdquo;</p>
-  <div class="review-featured__attr">{{ featured.author }} · {{ featured.location }} · {{ featured.source }}</div>
+  <div class="review-featured__attr">{{ featured.author }}{% if featured.location %} · {{ featured.location }}{% endif %} · {{ featured.source }}</div>
 </div>
 
 <div class="grid grid--3" style="padding:40px var(--pad-x) 56px">
@@ -27,7 +27,7 @@ permalink: /reviews/
       <div class="review-card">
         <span class="review-card__stars">★★★★★</span>
         <p class="review-card__quote">&ldquo;{{ r.quote }}&rdquo;</p>
-        <span class="review-card__attr">{{ r.author }} · {{ r.location }} · {{ r.source }}</span>
+        <span class="review-card__attr">{{ r.author }}{% if r.location %} · {{ r.location }}{% endif %} · {{ r.source }}</span>
       </div>
     {% endif %}
   {% endfor %}

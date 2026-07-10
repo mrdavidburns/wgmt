@@ -28,7 +28,7 @@ permalink: /gallery/
   {% for p in projects %}
     <div class="card">
       <div class="photo photo--tall"><img src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy"></div>
-      <span class="card__title" style="font-size:17px">{{ p.title }} · {{ p.location }}</span>
+      <span class="card__title" style="font-size:17px">{{ p.title }}{% if p.location %} · {{ p.location }}{% endif %}</span>
     </div>
   {% endfor %}
 </div>
