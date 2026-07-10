@@ -10,7 +10,18 @@
 
   <nav class="header__nav" id="site-nav">
     {% for item in nav %}
-      <a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% if item.children %}
+        <div class="nav-sub">
+          <a href="{{ item.url }}" {% if page.url == item.url or page.url.startsWith(item.url) %}aria-current="page"{% endif %} aria-haspopup="true">{{ item.label }}<span class="nav-sub__caret" aria-hidden="true">▾</span></a>
+          <div class="nav-sub__menu">
+            {% for child in item.children %}
+              <a href="{{ child.url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>{{ child.label }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endif %}
     {% endfor %}
     <a class="header__cta" href="/contact/" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Visit the Showroom</a>
   </nav>

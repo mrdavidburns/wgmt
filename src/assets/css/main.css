@@ -221,6 +221,35 @@ h3 { margin: 0; font: 400 22px/1.3 var(--display); }
 .header__cta[aria-current="page"] { background: var(--ink); color: #f5f2ec; }
 .header__toggle { display: none; }
 
+/* Countertops dropdown */
+.nav-sub { position: relative; }
+.nav-sub > a { display: inline-flex; align-items: center; gap: 5px; }
+.nav-sub__caret { font-size: 9px; color: var(--faint); }
+.nav-sub__menu {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: -18px;
+  min-width: 200px;
+  padding: 8px 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(43, 41, 38, .08);
+  display: flex;
+  flex-direction: column;
+  transition: opacity .12s;
+}
+.nav-sub:hover .nav-sub__menu,
+.nav-sub:focus-within .nav-sub__menu { visibility: visible; opacity: 1; }
+.nav-sub__menu a {
+  padding: 10px 18px;
+  border-bottom: none !important;
+  font-weight: 500;
+}
+.nav-sub__menu a:hover { background: #fff; color: var(--bronze); }
+.nav-sub__menu a[aria-current="page"] { color: var(--bronze); }
+
 /* ---- Footer ---- */
 .footer {
   display: flex;
@@ -698,6 +727,26 @@ h3 { margin: 0; font: 400 22px/1.3 var(--display); }
     margin: 14px var(--pad-x) 0;
     text-align: center;
     border-radius: 2px;
+  }
+
+  /* Dropdown flattens to indented links on mobile */
+  .nav-sub { display: flex; flex-direction: column; }
+  .nav-sub > a { padding: 14px var(--pad-x); border-bottom: 1px solid var(--line); }
+  .nav-sub__caret { display: none; }
+  .nav-sub__menu {
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    min-width: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: rgba(43, 41, 38, .03);
+  }
+  .nav-sub__menu a {
+    padding: 12px calc(var(--pad-x) + 18px) !important;
+    border-bottom: 1px solid var(--line) !important;
+    font-size: 13px;
   }
 }
 

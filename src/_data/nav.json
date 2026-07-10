@@ -1,5 +1,15 @@
 [
-  { "label": "Countertops", "url": "/countertops/" },
+  {
+    "label": "Countertops",
+    "url": "/countertops/",
+    "children": [
+      { "label": "The Stone Library", "url": "/countertops/" },
+      { "label": "Quartz", "url": "/countertops/quartz/" },
+      { "label": "Granite", "url": "/countertops/granite/" },
+      { "label": "Marble", "url": "/countertops/marble/" },
+      { "label": "Natural Stone", "url": "/countertops/natural-stone/" }
+    ]
+  },
   { "label": "Cabinets", "url": "/cabinets/" },
   { "label": "Tile", "url": "/tile/" },
   { "label": "Gallery", "url": "/gallery/" },
