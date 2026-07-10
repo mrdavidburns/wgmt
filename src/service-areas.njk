@@ -46,6 +46,16 @@ faq:
   </div>
 </div>
 
+<div class="section" style="padding-bottom:0">
+  <div class="section-head">
+    <h2>Start from the showroom</h2>
+    <p class="lede lede--sm" style="max-width:44ch">{{ site.showroom.address1 }}, {{ site.showroom.address2 }} · {{ site.showroom.hours1 }} · {{ site.showroom.hours2 }} · <a href="{{ site.showroom.mapsUrl }}" target="_blank" rel="noopener">Get directions</a></p>
+  </div>
+</div>
+<div class="embed-frame embed-frame--map">
+  <iframe src="https://www.google.com/maps?q=Wholesale+Granite+Marble+%26+Tile,+{{ site.showroom.address1 | urlencode }},+{{ site.showroom.address2 | urlencode }}&output=embed" title="Map to the WGMT showroom at {{ site.showroom.address1 }}, {{ site.showroom.address2 }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+</div>
+
 <div class="section">
   <h2 style="margin-bottom:36px">Common questions</h2>
   <div class="grid grid--3" style="gap:40px">
