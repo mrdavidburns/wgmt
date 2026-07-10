@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":semanticCommitsDisabled"],
+  "timezone": "America/New_York",
+  "schedule": ["before 9am on monday"],
+  "prConcurrentLimit": 3,
+  "packageRules": [
+    {
+      "description": "Auto-merge patch and minor updates once CI passes — low risk for a static site with a build check",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "description": "Sveltia CMS bundle is copied into the deployed site — group its updates so they're easy to spot",
+      "matchPackageNames": ["@sveltia/cms"],
+      "groupName": "Sveltia CMS"
+    }
+  ],
+  "lockFileMaintenance": { "enabled": true, "schedule": ["before 9am on the first day of the month"] }
+}
