@@ -27,7 +27,7 @@ description: Granite, quartz, marble, and tile — fabricated in-house on the Ma
   </div>
   <div class="grid grid--4">
     {% for m in materials %}
-      <a class="card" href="/countertops/">
+      <a class="card" href="{{ m.url }}">
         <div class="photo photo--tall"><img src="{{ m.image }}" alt="{{ m.alt }}" loading="lazy"></div>
         <span class="card__title">{{ m.name }}</span>
         <span class="card__meta">{{ m.desc }}</span>
