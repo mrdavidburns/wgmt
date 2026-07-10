@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "heading": "Stone that makes the kitchen the heart of the house.",
+    "lede": "Granite, quartz, marble, and tile — fabricated in-house, installed with a lifetime warranty, and priced like a wholesaler because we are one.",
+    "primaryButton": "Plan a Showroom Visit",
+    "secondaryButton": "Get a Free Estimate",
+    "image": "/assets/img/hero-kitchen.webp",
+    "alt": "White shaker kitchen with quartz island, farmhouse sink, and pendant lighting",
+    "caption": "Quartz island kitchen · Main Line install"
+  },
+  "materialsHeading": "The materials",
+  "band": {
+    "kicker": "150+ reviews · Google · Yelp · HomeAdvisor",
+    "quote": "Price wise, these guys came in $3,000 less than Colonial. The owner himself actually came out to our home just to make sure the templating was done properly.",
+    "attribution": "Peter J. · Google",
+    "heading": "See the slabs in person.",
+    "note": "Or shop at home — we bring samples and ideas to you.",
+    "button": "Get Directions"
+  }
+}

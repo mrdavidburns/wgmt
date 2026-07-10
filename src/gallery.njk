@@ -7,20 +7,20 @@ schemaType: CollectionPage
 ---
 
 <div class="page-head">
-  <span class="kicker">Recent Work</span>
-  <h1>Kitchens &amp; baths around the Main Line.</h1>
+  <span class="kicker">{{ gallery.kicker }}</span>
+  <h1>{{ gallery.heading }}</h1>
 </div>
 
 <div class="featured">
   <div class="photo photo--wide" style="aspect-ratio:auto;min-height:280px">
-    <img src="/assets/img/hero-kitchen.webp" alt="White shaker kitchen with quartz island, farmhouse sink, and pendant lighting">
+    <img src="{{ gallery.featured.image }}" alt="{{ gallery.featured.alt }}">
   </div>
   <div class="featured__copy">
-    <span class="kicker" style="font-size:11px;letter-spacing:.2em">Featured · Main Line</span>
-    <h2 style="font-size:30px">Quartz island, full remodel</h2>
-    <p class="lede lede--sm" style="font-size:14.5px">Quartz counters, tile backsplash, CAD-designed cabinets. Templated to installed in eleven days.</p>
+    <span class="kicker" style="font-size:11px;letter-spacing:.2em">{{ gallery.featured.label }}</span>
+    <h2 style="font-size:30px">{{ gallery.featured.heading }}</h2>
+    <p class="lede lede--sm" style="font-size:14.5px">{{ gallery.featured.desc }}</p>
     <div class="featured__tags">
-      <span>Quartz</span><span>·</span><span>Cabinets</span><span>·</span><span>Tile</span>
+      <span>{{ gallery.featured.tags }}</span>
     </div>
   </div>
 </div>
@@ -34,5 +34,5 @@ schemaType: CollectionPage
   {% endfor %}
 </div>
 
-{% set cta = { text: "Like what you see? Your kitchen is next.", button: "Get a Free Estimate" } %}
+{% set cta = gallery.cta %}
 {% include "partials/cross-cta.njk" %}

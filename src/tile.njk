@@ -8,9 +8,9 @@ permalink: /tile/
 <div class="page-head page-head--split">
   <div>
     <span class="kicker">Tile &amp; Backsplash</span>
-    <h1>The finishing layer.</h1>
+    <h1>{{ tilePage.heading }}</h1>
   </div>
-  <p class="lede lede--sm" style="max-width:40ch">A full Daltile showroom plus natural stone and glass mosaics — set by the same crew that installs your counters.</p>
+  <p class="lede lede--sm" style="max-width:40ch">{{ tilePage.lede }}</p>
 </div>
 
 <div class="grid grid--3" style="padding:8px var(--pad-x) 56px; gap:28px 20px">
@@ -31,21 +31,21 @@ permalink: /tile/
   {% endfor %}
 </div>
 
-<p style="margin:0;padding:0 var(--pad-x) 40px;font:400 12px var(--sans);color:var(--faint)">Room scenes courtesy of Daltile. WGMT is an authorized Daltile dealer.</p>
+<p style="margin:0;padding:0 var(--pad-x) 40px;font:400 12px var(--sans);color:var(--faint)">{{ tilePage.credit }}</p>
 
 <div class="section" style="padding-top:0">
   <div class="section-head">
-    <h2>Browse the Daltile catalog</h2>
-    <p class="lede lede--sm" style="max-width:44ch">Flip through the full product catalog right here, or take it with you — Daltile&rsquo;s ProExchange app puts products, pricing, and ordering on your phone.</p>
+    <h2>{{ tilePage.catalog.heading }}</h2>
+    <p class="lede lede--sm" style="max-width:44ch">{{ tilePage.catalog.lede }}</p>
   </div>
 
   <div class="embed-note" style="margin:0 0 24px">
     <span class="kicker" style="font-size:11px">Product catalog · PDF</span>
-    <p>Viewing on a phone? <a href="https://digitalassets.daltile.com/content/dam/Daltile/website/resources/products/product-catalogs/DAL_2017_Catalog_Final_WebHQ.pdf" target="_blank" rel="noopener">Open the catalog in a new tab</a> — it&rsquo;s easier to pinch and zoom.</p>
+    <p>Viewing on a phone? <a href="{{ tilePage.catalog.pdfUrl }}" target="_blank" rel="noopener">Open the catalog in a new tab</a> — it&rsquo;s easier to pinch and zoom.</p>
   </div>
 
   <div class="embed-frame" style="margin:0 0 32px">
-    <iframe src="https://digitalassets.daltile.com/content/dam/Daltile/website/resources/products/product-catalogs/DAL_2017_Catalog_Final_WebHQ.pdf" title="Daltile product catalog (PDF)" loading="lazy"></iframe>
+    <iframe src="{{ tilePage.catalog.pdfUrl }}" title="Daltile product catalog (PDF)" loading="lazy"></iframe>
   </div>
 
   <div class="app-links">
@@ -55,5 +55,5 @@ permalink: /tile/
   </div>
 </div>
 
-{% set cta = { text: "Bringing a backsplash idea? We’ll match it to your stone.", button: "Plan a Showroom Visit" } %}
+{% set cta = tilePage.cta %}
 {% include "partials/cross-cta.njk" %}

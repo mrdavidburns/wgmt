@@ -11,18 +11,18 @@ breadcrumbs:
 <div class="hero hero--short">
   <div class="hero__copy">
     <span class="kicker"><a href="/countertops/" style="text-decoration:none">Countertops</a> · Marble</span>
-    <h1>Marble from around the world.</h1>
-    <p class="lede" style="font-size:16px">Carrara, Calacatta, and beyond — we carry top-quality marble slabs and design, fabricate, and install marble countertops in kitchens, bathrooms, and commercial spaces.</p>
-    <p class="lede" style="font-size:16px">Marble is a softer, honed stone that rewards a little care with a look nothing else matches. We&rsquo;ll walk you through where it shines — vanities, baking counters, fireplace surrounds — and where a quartz or granite might serve you better.</p>
+    <h1>{{ materialPages.marble.heading }}</h1>
+    <p class="lede" style="font-size:16px">{{ materialPages.marble.lede1 }}</p>
+    <p class="lede" style="font-size:16px">{{ materialPages.marble.lede2 }}</p>
     <div class="hero__actions">
       <a class="btn btn--dark" href="/contact/">Get a Free Estimate</a>
       <a class="btn btn--link" href="/countertops/">Browse the Stone Library</a>
     </div>
   </div>
   <div class="hero__media">
-    <img src="/assets/img/mat-marble.webp" alt="Calacatta marble countertop edge detail with gold veining">
+    <img src="{{ materialPages.marble.image }}" alt="{{ materialPages.marble.alt }}">
   </div>
 </div>
 
-{% set cta = { text: "Come run your hand over the Calacatta.", button: "Plan a Showroom Visit" } %}
+{% set cta = materialPages.marble.cta %}
 {% include "partials/cross-cta.njk" %}

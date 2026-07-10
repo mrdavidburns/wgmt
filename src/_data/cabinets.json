@@ -1,4 +1,15 @@
 {
+  "hero": {
+    "heading": "CAD-designed cabinets, built to fit the stone.",
+    "lede": "We design your cabinets in 3D and coordinate them with your counters and tile — one shop, one crew, one install date.",
+    "button": "Design My Kitchen",
+    "image": "/assets/img/cabinets-hero.webp",
+    "alt": "Warm maple kitchen cabinets with glass uppers, granite counters, and a black island"
+  },
+  "linesHeading": "Our cabinet lines",
+  "linesLede": "We carry top-rated cabinetry from five makers — every line on display in the Ardmore showroom. Browse a catalog, then come see the doors in person.",
+  "stepsHeading": "From measurement to installed in three steps.",
+  "cta": { "text": "One crew handles cabinets, counters, and tile.", "button": "Get a Free Estimate" },
   "doorStyles": [
     { "name": "Shaker", "desc": "Clean recessed panel — our most-requested door", "bg": "#e2ddd1,#dad5c8", "image": "" },
     { "name": "Flat-Panel", "desc": "Slab door, handleless option for modern kitchens", "bg": "#d9d3c6,#d1cbbd", "image": "" },

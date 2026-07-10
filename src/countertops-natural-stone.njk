@@ -11,25 +11,19 @@ breadcrumbs:
 <div class="page-head page-head--split">
   <div>
     <span class="kicker"><a href="/countertops/" style="text-decoration:none">Countertops</a> · Natural Stone</span>
-    <h1>Beyond granite and marble.</h1>
+    <h1>{{ materialPages.naturalStone.heading }}</h1>
   </div>
-  <p class="lede lede--sm" style="max-width:44ch">Travertine, limestone, slate, and onyx each bring something granite can&rsquo;t. We&rsquo;ll help you pick the right stone for the right room — and steer you away from the wrong one.</p>
+  <p class="lede lede--sm" style="max-width:44ch">{{ materialPages.naturalStone.lede }}</p>
 </div>
 
 <div class="grid grid--2" style="padding:8px var(--pad-x) 56px; gap:40px">
-  {% set stones = [
-    ["Travertine", "An affordable, natural look harvested around mineral springs. Similar strength to marble with a warmly pitted texture — slabs are sealed at install and resealed on a schedule we'll set up for you."],
-    ["Limestone", "Centuries of buildings can't be wrong: elegant, available, and affordable. Muted tones that read like marble at a friendlier price. As a calcium carbonate it dislikes acid, so we'll talk through where it belongs."],
-    ["Slate", "The overlooked workhorse. Fine-grained, naturally resistant to fading, chemicals, and constant traffic — equally at home on a bathroom floor, an outdoor walkway, or a dramatic feature wall."],
-    ["Onyx", "A precious, translucent stone — light can shine straight through it, which opens spectacular backlit possibilities. Softer than granite, so we reserve it for backsplashes, bath counters, and low-wear showpieces."]
-  ] %}
-  {% for s in stones %}
+  {% for s in materialPages.naturalStone.stones %}
     <div class="value">
-      <h3>{{ s[0] }}</h3>
-      <p>{{ s[1] }}</p>
+      <h3>{{ s.name }}</h3>
+      <p>{{ s.desc }}</p>
     </div>
   {% endfor %}
 </div>
 
-{% set cta = { text: "Not sure which stone? That’s what the showroom is for.", button: "Plan a Showroom Visit" } %}
+{% set cta = materialPages.naturalStone.cta %}
 {% include "partials/cross-cta.njk" %}

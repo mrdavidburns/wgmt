@@ -85,12 +85,186 @@ collections:
                   - { name: label, label: Label, widget: string }
                   - { name: url, label: URL, widget: string }
 
+  - name: pages
+    label: Pages
+    icon: description
+    files:
+      - name: home
+        label: Home Page
+        file: src/_data/home.json
+        fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - { name: primaryButton, label: Primary Button, widget: string }
+              - { name: secondaryButton, label: Secondary Button, widget: string }
+              - { name: image, label: Hero Image, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+              - { name: caption, label: Image Caption, widget: string }
+          - { name: materialsHeading, label: Materials Section Heading, widget: string }
+          - name: band
+            label: Review Band
+            widget: object
+            fields:
+              - { name: kicker, label: Kicker, widget: string }
+              - { name: quote, label: Quote, widget: text }
+              - { name: attribution, label: Attribution, widget: string }
+              - { name: heading, label: Right-side Heading, widget: string }
+              - { name: note, label: Right-side Note, widget: string }
+              - { name: button, label: Button Label, widget: string }
+
+      - name: about
+        label: About Page
+        file: src/_data/about.json
+        fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede1, label: First Paragraph, widget: text }
+              - { name: lede2, label: Second Paragraph, widget: text }
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+          - name: stats
+            label: Stats Row
+            widget: list
+            fields:
+              - { name: num, label: Number, widget: string }
+              - { name: label, label: Label, widget: string }
+          - { name: valuesHeading, label: Values Section Heading, widget: string }
+          - name: values
+            label: Values
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: desc, label: Description, widget: text }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }
+
+      - name: countertopsPage
+        label: Stone Library Page
+        file: src/_data/countertopsPage.json
+        fields:
+          - { name: heading, label: Heading, widget: string }
+          - { name: lede, label: Intro Text, widget: text }
+          - { name: favBanner, label: Favorites Banner Text, widget: string }
+          - { name: button, label: Banner Button Label, widget: string }
+
+      - name: materialPages
+        label: Countertop Material Pages
+        file: src/_data/materialPages.json
+        fields:
+          - name: granite
+            label: Granite
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - name: cta
+                label: Call-to-Action
+                widget: object
+                fields:
+                  - { name: text, label: Text, widget: string }
+                  - { name: button, label: Button Label, widget: string }
+          - name: quartz
+            label: Quartz
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - name: cta
+                label: Call-to-Action
+                widget: object
+                fields:
+                  - { name: text, label: Text, widget: string }
+                  - { name: button, label: Button Label, widget: string }
+          - name: marble
+            label: Marble
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede1, label: First Paragraph, widget: text }
+              - { name: lede2, label: Second Paragraph, widget: text }
+              - { name: image, label: Hero Image, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+              - name: cta
+                label: Call-to-Action
+                widget: object
+                fields:
+                  - { name: text, label: Text, widget: string }
+                  - { name: button, label: Button Label, widget: string }
+          - name: naturalStone
+            label: Natural Stone
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - name: stones
+                label: Stone Types
+                widget: list
+                fields:
+                  - { name: name, label: Name, widget: string }
+                  - { name: desc, label: Description, widget: text }
+              - name: cta
+                label: Call-to-Action
+                widget: object
+                fields:
+                  - { name: text, label: Text, widget: string }
+                  - { name: button, label: Button Label, widget: string }
+
+      - name: tilePage
+        label: Tile Page
+        file: src/_data/tilePage.json
+        fields:
+          - { name: heading, label: Heading, widget: string }
+          - { name: lede, label: Intro Text, widget: text }
+          - { name: credit, label: Photo Credit Line, widget: string }
+          - name: catalog
+            label: Daltile Catalog Section
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - { name: pdfUrl, label: Catalog PDF URL, widget: string, hint: "Update when Daltile publishes a new catalog" }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }
+
       - name: cabinets
         label: Cabinets Page
         file: src/_data/cabinets.json
         fields:
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - { name: button, label: Button Label, widget: string }
+              - { name: image, label: Hero Image, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+          - { name: linesHeading, label: Cabinet Lines Heading, widget: string }
+          - { name: linesLede, label: Cabinet Lines Intro, widget: text }
+          - { name: stepsHeading, label: Process Section Heading, widget: string }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }
           - name: doorStyles
-            label: Door Styles
+            label: Door Styles (currently hidden on page)
             widget: list
             fields:
               - { name: name, label: Name, widget: string }
@@ -104,6 +278,100 @@ collections:
               - { name: num, label: Number, widget: string }
               - { name: title, label: Title, widget: string }
               - { name: desc, label: Description, widget: text }
+
+      - name: gallery
+        label: Gallery Page
+        file: src/_data/gallery.json
+        fields:
+          - { name: kicker, label: Kicker, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - name: featured
+            label: Featured Project
+            widget: object
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: desc, label: Description, widget: text }
+              - { name: tags, label: Tags, widget: string, hint: "Separate with · (middle dot)" }
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }
+
+      - name: reviewsPage
+        label: Reviews Page
+        file: src/_data/reviewsPage.json
+        fields:
+          - { name: kicker, label: Kicker, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - name: sources
+            label: Review Sources
+            widget: list
+            fields:
+              - { name: name, label: Source, widget: select, options: [Google, Yelp, HomeAdvisor] }
+              - { name: rating, label: Star Rating, widget: string }
+              - { name: count, label: Review Count, widget: string, hint: "e.g. 80+" }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }
+
+      - name: contactPage
+        label: Contact Page
+        file: src/_data/contactPage.json
+        fields:
+          - { name: kicker, label: Kicker, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: lede, label: Intro Text, widget: text }
+          - name: projectTypes
+            label: Project Type Options
+            widget: list
+            field: { name: type, label: Type, widget: string }
+          - name: aside
+            label: Showroom Panel
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: note, label: Bottom Note, widget: string }
+
+      - name: serviceAreas
+        label: Service Areas Page
+        file: src/_data/serviceAreas.json
+        fields:
+          - name: intro
+            label: Intro
+            widget: object
+            fields:
+              - { name: heading, label: Page Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+          - name: regions
+            label: Regions
+            widget: list
+            fields:
+              - { name: name, label: Region Name, widget: string }
+              - { name: blurb, label: Blurb, widget: text }
+              - { name: towns, label: Towns, widget: string, hint: "Separate towns with · (middle dot)" }
+          - { name: mapHeading, label: Map Section Heading, widget: string }
+          - { name: faqHeading, label: FAQ Section Heading, widget: string }
+          - name: faq
+            label: FAQs
+            widget: list
+            hint: "Also published as FAQ structured data for Google and AI search"
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer, widget: text }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }
 
   - name: content
     label: Content
@@ -200,36 +468,3 @@ collections:
               - { name: desc, label: Description, widget: string }
               - { name: logo, label: Logo, widget: image }
               - { name: url, label: Catalog URL, widget: string }
-
-      - name: serviceAreas
-        label: Service Areas Page
-        file: src/_data/serviceAreas.json
-        fields:
-          - name: intro
-            label: Intro
-            widget: object
-            fields:
-              - { name: heading, label: Page Heading, widget: string }
-              - { name: lede, label: Intro Text, widget: text }
-          - name: regions
-            label: Regions
-            widget: list
-            fields:
-              - { name: name, label: Region Name, widget: string }
-              - { name: blurb, label: Blurb, widget: text }
-              - { name: towns, label: Towns, widget: string, hint: "Separate towns with · (middle dot)" }
-          - { name: mapHeading, label: Map Section Heading, widget: string }
-          - { name: faqHeading, label: FAQ Section Heading, widget: string }
-          - name: faq
-            label: FAQs
-            widget: list
-            hint: "Also published as FAQ structured data for Google and AI search"
-            fields:
-              - { name: q, label: Question, widget: string }
-              - { name: a, label: Answer, widget: text }
-          - name: cta
-            label: Bottom Call-to-Action
-            widget: object
-            fields:
-              - { name: text, label: Text, widget: string }
-              - { name: button, label: Button Label, widget: string }

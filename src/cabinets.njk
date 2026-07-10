@@ -8,22 +8,22 @@ permalink: /cabinets/
 <div class="hero hero--short">
   <div class="hero__copy">
     <span class="kicker">Cabinetry</span>
-    <h1>CAD-designed cabinets, built to fit the stone.</h1>
-    <p class="lede" style="font-size:16px">We design your cabinets in 3D and coordinate them with your counters and tile — one shop, one crew, one install date.</p>
+    <h1>{{ cabinets.hero.heading }}</h1>
+    <p class="lede" style="font-size:16px">{{ cabinets.hero.lede }}</p>
     <div class="hero__actions">
-      <a class="btn btn--dark" href="/contact/">Design My Kitchen</a>
+      <a class="btn btn--dark" href="/contact/">{{ cabinets.hero.button }}</a>
     </div>
   </div>
   <div class="hero__media">
-    <img src="/assets/img/cabinets-hero.webp" alt="Warm maple kitchen cabinets with glass uppers, granite counters, and a black island">
+    <img src="{{ cabinets.hero.image }}" alt="{{ cabinets.hero.alt }}">
   </div>
 </div>
 
 {# Door-styles grid removed for now (data still in cabinets.json) — cabinet lines take its slot. #}
 <div class="section">
   <div class="section-head">
-    <h2>Our cabinet lines</h2>
-    <p class="lede lede--sm" style="max-width:44ch">We carry top-rated cabinetry from five makers — every line on display in the Ardmore showroom. Browse a catalog, then come see the doors in person.</p>
+    <h2>{{ cabinets.linesHeading }}</h2>
+    <p class="lede lede--sm" style="max-width:44ch">{{ cabinets.linesLede }}</p>
   </div>
   <div class="grid grid--3 mfr-grid">
     {% for m in manufacturers %}
@@ -39,7 +39,7 @@ permalink: /cabinets/
 
 <div class="band" style="padding:64px var(--pad-x)">
   <span class="kicker kicker--light">How it works</span>
-  <h2 style="margin:12px 0 40px">From measurement to installed in three steps.</h2>
+  <h2 style="margin:12px 0 40px">{{ cabinets.stepsHeading }}</h2>
   <div class="grid grid--3" style="gap:40px">
     {% for s in cabinets.steps %}
       <div class="step">
@@ -51,5 +51,5 @@ permalink: /cabinets/
   </div>
 </div>
 
-{% set cta = { text: "One crew handles cabinets, counters, and tile.", button: "Get a Free Estimate" } %}
+{% set cta = cabinets.cta %}
 {% include "partials/cross-cta.njk" %}

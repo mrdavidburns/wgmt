@@ -7,22 +7,22 @@ description: Granite, quartz, marble, and tile — fabricated in-house on the Ma
 <div class="hero">
   <div class="hero__copy">
     <span class="kicker">Ardmore · Since {{ site.since }}</span>
-    <h1>Stone that makes the kitchen the heart of the house.</h1>
-    <p class="lede">Granite, quartz, marble, and tile — fabricated in-house, installed with a lifetime warranty, and priced like a wholesaler because we are one.</p>
+    <h1>{{ home.hero.heading }}</h1>
+    <p class="lede">{{ home.hero.lede }}</p>
     <div class="hero__actions">
-      <a class="btn btn--dark" href="/contact/">Plan a Showroom Visit</a>
-      <a class="btn btn--link" href="/contact/">Get a Free Estimate</a>
+      <a class="btn btn--dark" href="/contact/">{{ home.hero.primaryButton }}</a>
+      <a class="btn btn--link" href="/contact/">{{ home.hero.secondaryButton }}</a>
     </div>
   </div>
   <div class="hero__media">
-    <img src="/assets/img/hero-kitchen.webp" alt="White shaker kitchen with quartz island, farmhouse sink, and pendant lighting" fetchpriority="high">
-    <div class="hero__caption">Quartz island kitchen · Main Line install</div>
+    <img src="{{ home.hero.image }}" alt="{{ home.hero.alt }}" fetchpriority="high">
+    <div class="hero__caption">{{ home.hero.caption }}</div>
   </div>
 </div>
 
 <div class="section">
   <div class="section-head">
-    <h2>The materials</h2>
+    <h2>{{ home.materialsHeading }}</h2>
     <a class="text-link" href="/countertops/">Browse all stone →</a>
   </div>
   <div class="grid grid--4">
@@ -38,13 +38,13 @@ description: Granite, quartz, marble, and tile — fabricated in-house on the Ma
 
 <div class="band band--split">
   <div class="band__cell">
-    <span class="kicker kicker--light">150+ reviews · Google · Yelp · HomeAdvisor</span>
-    <p class="band__quote">&ldquo;Price wise, these guys came in $3,000 less than Colonial. The owner himself actually came out to our home just to make sure the templating was done properly.&rdquo;</p>
-    <span class="band__attr">Peter J. · Google</span>
+    <span class="kicker kicker--light">{{ home.band.kicker }}</span>
+    <p class="band__quote">&ldquo;{{ home.band.quote }}&rdquo;</p>
+    <span class="band__attr">{{ home.band.attribution }}</span>
   </div>
   <div class="band__cell band__cell--divided">
-    <h3>See the slabs in person.</h3>
-    <p class="band__note">Or shop at home — we bring samples and ideas to you.</p>
-    <a class="btn btn--light" href="/contact/" style="align-self:flex-start">Get Directions</a>
+    <h3>{{ home.band.heading }}</h3>
+    <p class="band__note">{{ home.band.note }}</p>
+    <a class="btn btn--light" href="/contact/" style="align-self:flex-start">{{ home.band.button }}</a>
   </div>
 </div>

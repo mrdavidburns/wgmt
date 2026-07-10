@@ -1,0 +1,10 @@
+{
+  "kicker": "Free Estimate",
+  "heading": "Tell us about your project.",
+  "lede": "We'll call you back within one business day — usually the same afternoon.",
+  "projectTypes": ["Kitchen counters", "Bath / vanity", "Cabinets", "Tile", "Commercial"],
+  "aside": {
+    "heading": "Better yet — come see the slabs.",
+    "note": "Can't make it in? We shop-at-home too — we'll bring samples and ideas to you."
+  }
+}

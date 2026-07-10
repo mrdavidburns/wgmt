@@ -5,17 +5,17 @@ description: 100+ five-star reviews across Yelp, Google, and HomeAdvisor from ki
 permalink: /reviews/
 ---
 
+{% set sourceUrls = { "Google": site.links.google, "Yelp": site.links.yelp, "HomeAdvisor": site.links.homeadvisor } %}
 <div class="page-head">
-  <span class="kicker">Testimonials</span>
-  <h1>150+ reviews across the Main Line.</h1>
+  <span class="kicker">{{ reviewsPage.kicker }}</span>
+  <h1>{{ reviewsPage.heading }}</h1>
   <div class="review-sources">
-    <a href="{{ site.links.google }}" target="_blank" rel="noopener">★ 4.9 &nbsp;Google (80+)</a>
-    <a href="{{ site.links.yelp }}" target="_blank" rel="noopener">★ 5.0 &nbsp;Yelp (30+)</a>
-    <a href="{{ site.links.homeadvisor }}" target="_blank" rel="noopener">★ 4.7 &nbsp;HomeAdvisor (50+)</a>
+    {% for s in reviewsPage.sources %}
+      <a href="{{ sourceUrls[s.name] }}" target="_blank" rel="noopener">★ {{ s.rating }} &nbsp;{{ s.name }} ({{ s.count }})</a>
+    {% endfor %}
   </div>
 </div>
 
-{% set sourceUrls = { "Google": site.links.google, "Yelp": site.links.yelp, "HomeAdvisor": site.links.homeadvisor } %}
 {% set featured = reviews | selectattr("featured") | first %}
 <div class="review-featured">
   <p class="review-featured__quote">&ldquo;{{ featured.quote }}&rdquo;</p>
@@ -34,5 +34,5 @@ permalink: /reviews/
   {% endfor %}
 </div>
 
-{% set cta = { text: "Your review could be next.", button: "Get a Free Estimate" } %}
+{% set cta = reviewsPage.cta %}
 {% include "partials/cross-cta.njk" %}

@@ -11,9 +11,9 @@ breadcrumbs:
 <div class="page-head page-head--split">
   <div>
     <span class="kicker"><a href="/countertops/" style="text-decoration:none">Countertops</a> · Granite</span>
-    <h1>Granite is our specialty.</h1>
+    <h1>{{ materialPages.granite.heading }}</h1>
   </div>
-  <p class="lede lede--sm" style="max-width:44ch">It&rsquo;s in the name. We design, fabricate, and install granite countertops for kitchens, bathrooms, and commercial spaces — featuring MSI granite slabs in every color the earth makes.</p>
+  <p class="lede lede--sm" style="max-width:44ch">{{ materialPages.granite.lede }}</p>
 </div>
 
 <div class="embed-note">
@@ -25,5 +25,5 @@ breadcrumbs:
   <iframe src="https://www.msisurfaces.com/granite-countertops/" title="MSI granite countertop collections" loading="lazy"></iframe>
 </div>
 
-{% set cta = { text: "Found your granite? See the full slab in Ardmore.", button: "Plan a Showroom Visit" } %}
+{% set cta = materialPages.granite.cta %}
 {% include "partials/cross-cta.njk" %}

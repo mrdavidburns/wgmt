@@ -1,0 +1,13 @@
+{
+  "kicker": "Recent Work",
+  "heading": "Kitchens & baths around the Main Line.",
+  "featured": {
+    "label": "Featured · Main Line",
+    "heading": "Quartz island, full remodel",
+    "desc": "Quartz counters, tile backsplash, CAD-designed cabinets. Templated to installed in eleven days.",
+    "tags": "Quartz · Cabinets · Tile",
+    "image": "/assets/img/hero-kitchen.webp",
+    "alt": "White shaker kitchen with quartz island, farmhouse sink, and pendant lighting"
+  },
+  "cta": { "text": "Like what you see? Your kitchen is next.", "button": "Get a Free Estimate" }
+}

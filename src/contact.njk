@@ -8,9 +8,9 @@ schemaType: ContactPage
 
 <div class="contact">
   <div class="contact__form">
-    <span class="kicker">Free Estimate</span>
-    <h1 style="font-size:clamp(30px,4vw,42px)">Tell us about your project.</h1>
-    <p class="lede lede--sm">We&rsquo;ll call you back within one business day — usually the same afternoon.</p>
+    <span class="kicker">{{ contactPage.kicker }}</span>
+    <h1 style="font-size:clamp(30px,4vw,42px)">{{ contactPage.heading }}</h1>
+    <p class="lede lede--sm">{{ contactPage.lede }}</p>
 
     <form data-estimate-form data-thanks-url="/thanks/" action="https://formspree.io/f/{{ site.formspreeId }}" method="POST">
       <div class="form-row" style="margin-bottom:22px">
@@ -27,8 +27,7 @@ schemaType: ContactPage
       <div class="field" style="margin-bottom:22px">
         <label id="ptype-label">PROJECT TYPE</label>
         <div class="radio-chips" role="radiogroup" aria-labelledby="ptype-label">
-          {% set types = ["Kitchen counters", "Bath / vanity", "Cabinets", "Tile", "Commercial"] %}
-          {% for t in types %}
+          {% for t in contactPage.projectTypes %}
             <input type="radio" id="pt-{{ loop.index }}" name="project_type" value="{{ t }}" {% if loop.first %}checked{% endif %}>
             <label for="pt-{{ loop.index }}">{{ t }}</label>
           {% endfor %}
@@ -52,7 +51,7 @@ schemaType: ContactPage
     <div class="photo photo--wide" style="aspect-ratio:16/9">
       <img src="/assets/img/showroom.webp" alt="WGMT showroom interior with slab displays and sample boards" loading="lazy">
     </div>
-    <h2>Better yet — come see the slabs.</h2>
+    <h2>{{ contactPage.aside.heading }}</h2>
     <div class="contact__info">
       <div>
         <span class="contact__info-label">ADDRESS</span>
@@ -75,6 +74,6 @@ schemaType: ContactPage
       <a class="btn btn--light" href="{{ site.showroom.mapsUrl }}" target="_blank" rel="noopener">Get Directions</a>
       <a class="btn btn--outline-light" href="{{ site.links.tour360 }}" target="_blank" rel="noopener">360° Virtual Tour</a>
     </div>
-    <p class="contact__note">Can&rsquo;t make it in? We shop-at-home too — we&rsquo;ll bring samples and ideas to you.</p>
+    <p class="contact__note">{{ contactPage.aside.note }}</p>
   </div>
 </div>

@@ -1,0 +1,10 @@
+{
+  "kicker": "Testimonials",
+  "heading": "150+ reviews across the Main Line.",
+  "sources": [
+    { "name": "Google", "rating": "4.9", "count": "80+" },
+    { "name": "Yelp", "rating": "5.0", "count": "30+" },
+    { "name": "HomeAdvisor", "rating": "4.7", "count": "50+" }
+  ],
+  "cta": { "text": "Your review could be next.", "button": "Get a Free Estimate" }
+}

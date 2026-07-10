@@ -1,0 +1,31 @@
+{
+  "granite": {
+    "heading": "Granite is our specialty.",
+    "lede": "It's in the name. We design, fabricate, and install granite countertops for kitchens, bathrooms, and commercial spaces — featuring MSI granite slabs in every color the earth makes.",
+    "cta": { "text": "Found your granite? See the full slab in Ardmore.", "button": "Plan a Showroom Visit" }
+  },
+  "quartz": {
+    "heading": "Dazzling quartz, installed flawlessly.",
+    "lede": "We recommend Q™ Premium Natural Quartz and also carry CaesarStone, Cambria, Silestone, and Zodiaq. Low-maintenance, non-porous, and consistent — designed, fabricated, and installed by one crew.",
+    "cta": { "text": "Found your quartz? We'll pull a sample for your visit.", "button": "Plan a Showroom Visit" }
+  },
+  "marble": {
+    "heading": "Marble from around the world.",
+    "lede1": "Carrara, Calacatta, and beyond — we carry top-quality marble slabs and design, fabricate, and install marble countertops in kitchens, bathrooms, and commercial spaces.",
+    "lede2": "Marble is a softer, honed stone that rewards a little care with a look nothing else matches. We'll walk you through where it shines — vanities, baking counters, fireplace surrounds — and where a quartz or granite might serve you better.",
+    "image": "/assets/img/mat-marble.webp",
+    "alt": "Calacatta marble countertop edge detail with gold veining",
+    "cta": { "text": "Come run your hand over the Calacatta.", "button": "Plan a Showroom Visit" }
+  },
+  "naturalStone": {
+    "heading": "Beyond granite and marble.",
+    "lede": "Travertine, limestone, slate, and onyx each bring something granite can't. We'll help you pick the right stone for the right room — and steer you away from the wrong one.",
+    "stones": [
+      { "name": "Travertine", "desc": "An affordable, natural look harvested around mineral springs. Similar strength to marble with a warmly pitted texture — slabs are sealed at install and resealed on a schedule we'll set up for you." },
+      { "name": "Limestone", "desc": "Centuries of buildings can't be wrong: elegant, available, and affordable. Muted tones that read like marble at a friendlier price. As a calcium carbonate it dislikes acid, so we'll talk through where it belongs." },
+      { "name": "Slate", "desc": "The overlooked workhorse. Fine-grained, naturally resistant to fading, chemicals, and constant traffic — equally at home on a bathroom floor, an outdoor walkway, or a dramatic feature wall." },
+      { "name": "Onyx", "desc": "A precious, translucent stone — light can shine straight through it, which opens spectacular backlit possibilities. Softer than granite, so we reserve it for backsplashes, bath counters, and low-wear showpieces." }
+    ],
+    "cta": { "text": "Not sure which stone? That's what the showroom is for.", "button": "Plan a Showroom Visit" }
+  }
+}

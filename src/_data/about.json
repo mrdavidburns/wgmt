@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "heading": "A wholesaler that shows up at your house.",
+    "lede1": "Since 2001 we've fabricated and installed stone across the Main Line from our Ardmore showroom. We buy slabs by the container and cut them in our own shop — so you get wholesale pricing and a single crew that's accountable start to finish.",
+    "lede2": "The owner still runs templates himself. That's why the seams line up and the estimate holds.",
+    "image": "/assets/img/showroom.webp",
+    "alt": "WGMT showroom interior with slab displays and sample boards"
+  },
+  "stats": [
+    { "num": "2001", "label": "Serving the Main Line" },
+    { "num": "3", "label": "Generations, family-owned" },
+    { "num": "150+", "label": "Customer reviews" },
+    { "num": "1", "label": "Lifetime warranty" }
+  ],
+  "valuesHeading": "What we stand behind",
+  "values": [
+    { "title": "In-house fabrication", "desc": "Every slab is templated and cut in our own shop — no middleman, no markup." },
+    { "title": "One accountable crew", "desc": "Counters, cabinets, and tile from the same team, on one schedule." },
+    { "title": "Lifetime installation warranty", "desc": "We stand behind every install for as long as you own the home." }
+  ],
+  "cta": { "text": "Come meet us — the coffee's on.", "button": "Get Directions" }
+}
