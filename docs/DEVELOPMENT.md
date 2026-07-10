@@ -131,28 +131,22 @@ via Pages OIDC).
 One-time repo setup: **Settings → Pages → Build and deployment → Source →
 GitHub Actions.**
 
-## Planned: Decap CMS (or similar React editor)
+## Content editor (Sveltia CMS)
 
-The content architecture is already CMS-shaped. When adding Decap:
-
-1. Add `src/admin/index.html` loading the Decap bundle, and
-   `src/admin/config.yml` defining one **file collection** per `_data` JSON
-   file (Decap edits JSON natively — `format: json`)
-2. Passthrough-copy `src/admin` in `eleventy.config.js`
-3. Auth on GitHub Pages needs an external OAuth gateway or Decap's GitHub
-   backend with a small OAuth proxy (e.g. Cloudflare Worker); Netlify Identity
-   is not available here
-4. Media: point Decap's `media_folder` at `src/assets/img`
+Implemented — see [docs/CMS.md](CMS.md) for how it works and the one-time
+OAuth setup. Editor lives at `/admin/`, config at `src/admin/config.yml`,
+one file collection per `_data` JSON file.
 
 Keep new content in `_data` JSON (not hardcoded in templates) so it stays
-editable when the CMS lands.
+editable in the CMS.
 
 ## Gotchas
 
 - `.card` sets `display:flex`, which would beat the `hidden` attribute's UA
   style — `[hidden]{display:none!important}` in the reset guards this. Keep it.
-- The `og:image` meta uses a root-relative path; social scrapers want absolute
-  URLs. When the domain is final, switch it to an absolute URL in `base.njk`.
+- Canonical/OG/JSON-LD URLs are built from `url` in `site.json` — update that
+  one field (plus `site_url`/`display_url`/`logo_url` in `src/admin/config.yml`
+  and `ALLOWED_DOMAINS` on the auth worker) when the custom domain goes live.
 - Photo/caption pairing on /gallery/ and the material cards was matched to the
   best available photos from the old site's media library — worth a client
   review pass before launch.

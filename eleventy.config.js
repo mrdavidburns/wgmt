@@ -7,6 +7,12 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
+  // Sveltia CMS admin: static page + self-hosted bundle (no CDN at runtime)
+  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@sveltia/cms/dist/sveltia-cms.js": "admin/sveltia-cms.js",
+  });
+
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
 

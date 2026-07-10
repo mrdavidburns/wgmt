@@ -1,0 +1,202 @@
+# Sveltia CMS configuration.
+# Docs: https://github.com/sveltia/sveltia-cms
+#
+# Auth: GitHub OAuth via a Cloudflare Worker (sveltia-cms-auth).
+# Setup steps in docs/CMS.md. Until base_url points at a deployed worker,
+# the editor UI loads but sign-in will fail.
+
+backend:
+  name: github
+  repo: mrdavidburns/wgmt
+  branch: main
+  base_url: https://REPLACE-WITH-YOUR-AUTH-WORKER.workers.dev
+
+site_url: https://mrdavidburns.github.io/wgmt/
+display_url: https://mrdavidburns.github.io/wgmt/
+logo_url: https://mrdavidburns.github.io/wgmt/assets/img/logo-180.png
+
+media_folder: src/assets/img
+public_folder: /assets/img
+
+collections:
+  - name: settings
+    label: Site Settings
+    icon: settings
+    files:
+      - name: site
+        label: Contact Info, Hours & Links
+        file: src/_data/site.json
+        fields:
+          - { name: name, label: Business Name, widget: string }
+          - { name: shortName, label: Short Name, widget: string }
+          - { name: url, label: Canonical Site URL, widget: string, hint: "No trailing slash. Change when the custom domain goes live." }
+          - { name: tagline, label: Tagline, widget: text }
+          - { name: phone, label: Phone (display), widget: string }
+          - { name: phoneHref, label: "Phone (tel: link)", widget: string }
+          - { name: fax, label: Fax, widget: string }
+          - { name: email, label: Email, widget: string, required: false }
+          - { name: formspreeId, label: Formspree Form ID, widget: string }
+          - name: showroom
+            label: Showroom
+            widget: object
+            fields:
+              - { name: address1, label: Address Line 1, widget: string }
+              - { name: address2, label: Address Line 2, widget: string }
+              - { name: hours1, label: Hours Line 1, widget: string }
+              - { name: hours2, label: Hours Line 2, widget: string }
+              - { name: mapsUrl, label: Google Maps URL, widget: string }
+          - name: shop
+            label: Fabrication Shop
+            widget: object
+            fields:
+              - { name: address1, label: Address, widget: string }
+              - { name: note, label: Note, widget: string }
+          - { name: topbarNote, label: Top Bar Note, widget: string }
+          - { name: since, label: Founded (year), widget: string }
+          - name: links
+            label: External Links
+            widget: object
+            fields:
+              - { name: tour360, label: 360° Tour, widget: string }
+              - { name: google, label: Google Business, widget: string }
+              - { name: yelp, label: Yelp, widget: string }
+              - { name: homeadvisor, label: HomeAdvisor, widget: string }
+              - { name: angi, label: Angi, widget: string }
+              - { name: facebook, label: Facebook, widget: string }
+              - { name: instagram, label: Instagram, widget: string }
+              - { name: x, label: X (Twitter), widget: string }
+
+      - name: nav
+        label: Navigation
+        file: src/_data/nav.json
+        fields:
+          - name: items
+            label: Menu Items
+            widget: list
+            root: true
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: URL, widget: string }
+              - name: children
+                label: Submenu
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: url, label: URL, widget: string }
+
+      - name: cabinets
+        label: Cabinets Page
+        file: src/_data/cabinets.json
+        fields:
+          - name: doorStyles
+            label: Door Styles
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: desc, label: Description, widget: string }
+              - { name: bg, label: Placeholder Colors, widget: string, hint: "Two hex colors, comma-separated — used when no image is set" }
+              - { name: image, label: Image, widget: image, required: false }
+          - name: steps
+            label: Process Steps
+            widget: list
+            fields:
+              - { name: num, label: Number, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: desc, label: Description, widget: text }
+
+  - name: content
+    label: Content
+    icon: library_books
+    files:
+      - name: stones
+        label: Stone Library
+        file: src/_data/stones.json
+        fields:
+          - name: items
+            label: Stones
+            widget: list
+            root: true
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: type, label: Type, widget: select, options: [Quartz, Granite, Marble, Natural Stone], hint: "Must match a filter chip label on the Stone Library page" }
+              - { name: color, label: Color Family, widget: string }
+              - { name: desc, label: Description, widget: string }
+              - { name: bg, label: Placeholder Colors, widget: string, hint: "Two hex colors, comma-separated — used when no image is set" }
+              - { name: dark, label: Dark Card Text, widget: boolean, default: false }
+              - { name: inShowroom, label: In Showroom, widget: boolean, default: true }
+              - { name: image, label: Photo, widget: image, required: false }
+
+      - name: materials
+        label: Home Page Materials
+        file: src/_data/materials.json
+        fields:
+          - name: items
+            label: Material Cards
+            widget: list
+            root: true
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: desc, label: Description, widget: string }
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+              - { name: url, label: Links To, widget: string }
+
+      - name: projects
+        label: Gallery Projects
+        file: src/_data/projects.json
+        fields:
+          - name: items
+            label: Projects
+            widget: list
+            root: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: image, label: Photo, widget: image }
+              - { name: alt, label: Image Alt Text, widget: string }
+
+      - name: reviews
+        label: Reviews
+        file: src/_data/reviews.json
+        fields:
+          - name: items
+            label: Reviews
+            widget: list
+            root: true
+            fields:
+              - { name: quote, label: Quote, widget: text }
+              - { name: author, label: Author, widget: string }
+              - { name: location, label: Location, widget: string, required: false }
+              - { name: source, label: Source, widget: select, options: [Google, Yelp, HomeAdvisor] }
+              - { name: featured, label: Featured, widget: boolean, required: false, hint: "Exactly one review should be featured — it gets the large dark treatment" }
+
+      - name: tile
+        label: Tile Categories
+        file: src/_data/tile.json
+        fields:
+          - name: items
+            label: Categories
+            widget: list
+            root: true
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: desc, label: Description, widget: string }
+              - { name: bg, label: Placeholder Colors, widget: string, hint: "Two hex colors, comma-separated — used when no image is set" }
+              - { name: image, label: Image, widget: image, required: false }
+              - { name: alt, label: Image Alt Text, widget: string, required: false }
+              - { name: credit, label: Photo Credit, widget: string, required: false }
+
+      - name: manufacturers
+        label: Cabinet Manufacturers
+        file: src/_data/manufacturers.json
+        fields:
+          - name: items
+            label: Manufacturers
+            widget: list
+            root: true
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: desc, label: Description, widget: string }
+              - { name: logo, label: Logo, widget: image }
+              - { name: url, label: Catalog URL, widget: string }
