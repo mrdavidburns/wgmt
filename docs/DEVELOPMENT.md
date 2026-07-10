@@ -35,6 +35,7 @@ maps cleanly to a future CMS collection (see Decap section):
 | `projects.json` | Project grid on /gallery/ | |
 | `reviews.json` | /reviews/ + one `featured: true` gets the big dark treatment | |
 | `cabinets.json` | Door styles + 3-step process on /cabinets/ | |
+| `manufacturers.json` | Cabinet-maker cards on /cabinets/ with external catalog links | |
 | `tile.json` | 6 category cards on /tile/ | Same `image`-or-`bg` behavior as stones |
 
 ### Pages

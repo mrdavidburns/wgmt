@@ -1,0 +1,7 @@
+[
+  { "name": "Wellborn Forest", "desc": "Semi-custom kitchen cabinetry in a wide range of woods and finishes.", "logo": "/assets/img/mfr-wellborn-forest.jpg", "url": "https://www.wfcabinetry.com/products/?filter_products=doors" },
+  { "name": "Cabico", "desc": "Fully custom Canadian cabinetry, built one kitchen at a time.", "logo": "/assets/img/mfr-cabico.jpg", "url": "https://cabico.com/en/products/" },
+  { "name": "Seville", "desc": "Custom cabinet lines in classic and contemporary door styles.", "logo": "/assets/img/mfr-seville.jpg", "url": "http://sevillecabinetry.com/products/cabinet-lines/" },
+  { "name": "Adornus", "desc": "Designer series — full-access cabinetry with European styling.", "logo": "/assets/img/mfr-adornus.jpg", "url": "https://www.adornus.com/designer-series" },
+  { "name": "21st Century", "desc": "Custom cabinetry built right here in the Philadelphia area.", "logo": "/assets/img/mfr-21st-century.png", "url": "https://21stcenturycd.com/cabinets/" }
+]

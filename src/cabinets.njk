@@ -54,5 +54,22 @@ permalink: /cabinets/
   </div>
 </div>
 
+<div class="section">
+  <div class="section-head">
+    <h2>Our cabinet lines</h2>
+    <p class="lede lede--sm" style="max-width:44ch">We carry top-rated cabinetry from five makers — every line on display in the Ardmore showroom. Browse a catalog, then come see the doors in person.</p>
+  </div>
+  <div class="grid grid--3 mfr-grid">
+    {% for m in manufacturers %}
+      <a class="mfr-card" href="{{ m.url }}" target="_blank" rel="noopener">
+        <span class="mfr-card__logo"><img src="{{ m.logo }}" alt="{{ m.name }} logo" loading="lazy"></span>
+        <span class="card__title">{{ m.name }}</span>
+        <span class="card__meta">{{ m.desc }}</span>
+        <span class="text-link">View catalog →</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
 {% set cta = { text: "One crew handles cabinets, counters, and tile.", button: "Get a Free Estimate" } %}
 {% include "partials/cross-cta.njk" %}

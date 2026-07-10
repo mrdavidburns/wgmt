@@ -405,6 +405,33 @@ h3 { margin: 0; font: 400 22px/1.3 var(--display); }
 }
 .stone__fav[aria-pressed="true"] { background: var(--bronze); color: #f5f2ec; }
 
+/* ---- Manufacturer cards (cabinets) ---- */
+.mfr-grid { gap: 20px; }
+.mfr-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 26px 24px;
+  text-decoration: none;
+}
+.mfr-card:hover { border-color: var(--bronze); color: inherit; }
+.mfr-card:hover .text-link { color: var(--bronze); }
+.mfr-card__logo {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.mfr-card__logo img {
+  max-height: 72px;
+  max-width: 200px;
+  width: auto;
+  object-fit: contain;
+}
+.mfr-card .text-link { margin-top: auto; padding-top: 10px; align-self: flex-start; }
+
 /* ---- Featured (gallery) ---- */
 .featured {
   margin: 0 var(--pad-x);
