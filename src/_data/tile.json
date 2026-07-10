@@ -1,8 +1,8 @@
 [
-  { "name": "Porcelain & Ceramic", "desc": "Floors, walls, and wet areas — Daltile & more", "bg": "#dcd7ca,#d4cfc1", "image": "/assets/img/tile-porcelain.webp", "alt": "Porcelain tile sample" },
-  { "name": "Natural Stone", "desc": "Marble, travertine, and slate mosaics", "bg": "#d3cdbf,#cbc5b6", "image": "" },
-  { "name": "Glass Mosaic", "desc": "Backsplashes and accent bands", "bg": "#dad5c9,#d2cdbf", "image": "/assets/img/tile-glass-mosaic.webp", "alt": "Glass mosaic tile in mixed blues" },
-  { "name": "Large-Format", "desc": "Slab-look panels for seamless walls", "bg": "#e2ddd0,#dad5c7", "image": "" },
-  { "name": "Subway & Field", "desc": "Classic 3×6 and handmade-look tile", "bg": "#e5e0d4,#ddd8ca", "image": "" },
-  { "name": "Decorative & Trim", "desc": "Pencils, chair rails, and listellos", "bg": "#d7d1c4,#cfc9bb", "image": "" }
+  { "name": "Porcelain & Ceramic", "desc": "Floors, walls, and wet areas — Daltile & more", "bg": "#dcd7ca,#d4cfc1", "image": "/assets/img/tile-porcelain-daltile.webp", "alt": "Bathroom with marble-look porcelain tile floor and floating walnut vanity", "credit": "Daltile Sovran" },
+  { "name": "Natural Stone", "desc": "Marble, travertine, and slate mosaics", "bg": "#d3cdbf,#cbc5b6", "image": "/assets/img/tile-natural-stone.webp", "alt": "Lobby with white marble tile floor and marble mosaic feature wall", "credit": "Daltile Gamma marble" },
+  { "name": "Glass Mosaic", "desc": "Backsplashes and accent bands", "bg": "#dad5c9,#d2cdbf", "image": "/assets/img/tile-glass-daltile.webp", "alt": "Fireplace wall in glossy teal stacked glass tile", "credit": "Daltile Iridescent Isles" },
+  { "name": "Large-Format", "desc": "Slab-look panels for seamless walls", "bg": "#e2ddd0,#dad5c7", "image": "/assets/img/tile-large-format.webp", "alt": "Shower and tub surround in seamless travertine-look wall panels", "credit": "Daltile Panoramic Porcelain Surfaces" },
+  { "name": "Subway & Field", "desc": "Classic 3×6 and handmade-look tile", "bg": "#e5e0d4,#ddd8ca", "image": "/assets/img/tile-subway.webp", "alt": "Curved wall of glossy terracotta picket tile behind a salon desk", "credit": "Daltile Artefino" },
+  { "name": "Decorative & Trim", "desc": "Pencils, chair rails, and listellos", "bg": "#d7d1c4,#cfc9bb", "image": "/assets/img/tile-decorative.webp", "alt": "Butler's pantry backsplash in metallic hexagon mosaic", "credit": "Daltile Artefino Jewel" }
 ]
