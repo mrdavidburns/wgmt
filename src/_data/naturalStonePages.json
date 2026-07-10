@@ -1,0 +1,99 @@
+{
+  "travertine": {
+    "slug": "travertine",
+    "title": "Travertine Countertops — Care & Installation",
+    "description": "Travertine countertops, floors, and surfaces — fabricated in Lansdowne, installed across the Main Line and Greater Philadelphia, with sealing and care guidance included.",
+    "heading": "Travertine: a natural look that brightens the room.",
+    "lede": "Travertine brings warm, affordable, natural texture to kitchens, baths, floors, and outdoor spaces. We help you choose the right colors, patterns, and shades, cut the stone at our own shop, and install it across Greater Philadelphia — backed by a lifetime warranty.",
+    "sections": [
+      {
+        "heading": "Why travertine",
+        "paragraphs": [
+          "Travertine is harvested around mineral springs — like those at Yellowstone National Park — and in caves, where it forms as stalactites, stalagmites, and other sedimentary shapes. That origin gives it an enormous variety of colors and shades, from soft creams to rich walnut tones.",
+          "It's also unusually good at reflecting light, which means a travertine floor or countertop can visibly brighten the room it's installed in. In strength it's similar to marble: a solid working surface with a look nothing manufactured can match."
+        ]
+      },
+      {
+        "heading": "Proper care and installation",
+        "paragraphs": [
+          "Travertine needs to be sealed properly at installation and resealed every few years — we set that schedule up for you, so the stone stays clean and sanitary throughout its life.",
+          "Like most calcium-based stones it reacts to acid, so wipe up citrus, wine, and vinegar promptly and keep harsh chemicals off the surface. With that small amount of proactive care, a travertine installation lasts decades.",
+          "We've been designing and installing travertine since 2001, from our Ardmore showroom to homes across the Main Line, Delaware County, and Greater Philadelphia. Every installation carries our lifetime warranty."
+        ]
+      }
+    ],
+    "cta": { "text": "See travertine full-size in the Ardmore showroom.", "button": "Plan a Showroom Visit" }
+  },
+  "limestone": {
+    "slug": "limestone",
+    "title": "Limestone Countertops & Surfaces — Care & Installation",
+    "description": "Limestone countertops and surfaces cut to spec in our Lansdowne shop and installed across the Main Line, Delaware County, and Greater Philadelphia.",
+    "heading": "Limestone: centuries of buildings can't be wrong.",
+    "lede": "From ancient Egypt to modern design, limestone has stayed popular for the same three reasons — elegant appearance, ready availability, and a friendly price. We help you find the perfect limestone and cut it to your exact specifications.",
+    "sections": [
+      {
+        "heading": "Building with limestone",
+        "paragraphs": [
+          "Limestone has a muted, understated quality that complements almost any design aesthetic. It reads a lot like marble — but because the stone is more common, it's generally more affordable.",
+          "It's also comparatively easy to cut and shape, which is good news for custom work: curves, edge profiles, and unusual layouts that would be costly in harder stone are straightforward in limestone. Indoors or out, there's a wide range of colors and patterns to match your project."
+        ]
+      },
+      {
+        "heading": "Care and where it belongs",
+        "paragraphs": [
+          "Limestone is a calcium carbonate, so it reacts poorly to acid — spilled lemon juice or wine on a countertop, or acidic air pollution on an outdoor installation. It's also more delicate than granite, so it should be installed and maintained with care.",
+          "That's where we come in: we'll talk through where limestone belongs in your home and where a granite or quartz would serve you better. Between the price and the appearance, it's worth a little extra thought — and we've been guiding that choice for Philadelphia-area homeowners since 2001."
+        ]
+      }
+    ],
+    "cta": { "text": "Compare limestone and marble side by side in Ardmore.", "button": "Plan a Showroom Visit" }
+  },
+  "slate": {
+    "slug": "slate",
+    "title": "Slate Countertops, Floors & Tile — Care & Installation",
+    "description": "Slate for countertops, floors, walkways, and feature walls — freeze-thaw proof for Pennsylvania winters, installed across Greater Philadelphia with a lifetime warranty.",
+    "heading": "Slate: the overlooked workhorse.",
+    "lede": "Slate rarely gets first mention, but it's available in a huge range of colors and patterns and works everywhere from rooftops to sidewalks. We're pleased to reintroduce you to a strong, stylish material most people walk right past.",
+    "sections": [
+      {
+        "heading": "Choosing your slate",
+        "paragraphs": [
+          "Slate is a fine-grained metamorphic rock with an appearance that manages to be both subdued and dramatic. It's naturally resistant to fading, damage, and chemicals — and it's impervious to constant freezing and thawing, which makes it one of the few natural stones truly at home outdoors through a Pennsylvania winter.",
+          "It keeps its appearance for years under high-traffic use, indoors and out."
+        ]
+      },
+      {
+        "heading": "Where slate works",
+        "paragraphs": [
+          "An outdoor walkway, a bathroom or kitchen floor, a countertop, a fireplace surround, a shower enclosure, a dramatic feature wall — slate handles all of them, as long as it's installed properly. That's our job.",
+          "Whether you're after something warm and natural or stylish and modern, we carry one of the largest selections of discount slate in Pennsylvania, and we back every installation with a lifetime warranty."
+        ]
+      }
+    ],
+    "cta": { "text": "Not sure slate can look that good? Come see it.", "button": "Plan a Showroom Visit" }
+  },
+  "onyx": {
+    "slug": "onyx",
+    "title": "Onyx Countertops & Backsplashes — Care & Installation",
+    "description": "Translucent onyx for backlit backsplashes, bath countertops, and showpiece surfaces — expertly fabricated and installed across the Main Line and Greater Philadelphia.",
+    "heading": "Onyx: the showpiece stone.",
+    "lede": "Onyx is precious enough to be used in jewelry — and striking enough to carry a whole room. We offer patterns and colors from simple and elegant to complex and intricate, for anyone who wants something truly rare.",
+    "sections": [
+      {
+        "heading": "What makes onyx special",
+        "paragraphs": [
+          "Onyx is translucent: light can shine straight through it. Backlight a slab and the surface takes on a literal glow — which opens up lighting possibilities no other stone offers.",
+          "Its swirls and patterns come from quartz and silicon dioxide, and its colors from the minerals present in the ground during formation. No two slabs are remotely alike."
+        ]
+      },
+      {
+        "heading": "Care and placement",
+        "paragraphs": [
+          "Onyx is softer than granite or marble, and as a calcium-based stone it's sensitive to acids. So we place it where it shines and wear is low: kitchen backsplashes, bathroom countertops, bar fronts, and feature panels rather than the main kitchen worktop.",
+          "Our installers have years of experience with this stone, every placement is careful and deliberate, and our workmanship carries a lifetime warranty. If you want to see what backlit onyx actually looks like, ask us — it photographs well, but in person it's better."
+        ]
+      }
+    ],
+    "cta": { "text": "Come see a slab you can shine a light through.", "button": "Plan a Showroom Visit" }
+  }
+}

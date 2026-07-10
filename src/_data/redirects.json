@@ -1,0 +1,6 @@
+[
+  { "from": "travertine", "to": "/countertops/natural-stone/travertine/" },
+  { "from": "limestone", "to": "/countertops/natural-stone/limestone/" },
+  { "from": "slate", "to": "/countertops/natural-stone/slate/" },
+  { "from": "onyx", "to": "/countertops/natural-stone/onyx/" }
+]

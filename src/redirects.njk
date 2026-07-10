@@ -1,0 +1,23 @@
+---
+pagination:
+  data: redirects
+  size: 1
+  alias: r
+permalink: "/{{ r.from }}/index.html"
+eleventyExcludeFromCollections: true
+---
+{#- Static redirect stubs preserving the old WordPress URLs (wholesalegmt.com/travertine/ etc.)
+    so existing links and indexed pages keep working after the domain cutover. -#}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ site.url }}{{ r.to }}">
+  <meta http-equiv="refresh" content="0; url={{ r.to | htmlBaseUrl }}">
+  <title>Redirecting…</title>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ r.to }}">{{ site.url }}{{ r.to }}</a>.</p>
+</body>
+</html>

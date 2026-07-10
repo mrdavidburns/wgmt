@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: naturalStonePages
+  size: 1
+  resolve: values
+  alias: stone
+  addAllPagesToCollections: true
+permalink: "/countertops/natural-stone/{{ stone.slug }}/"
+breadcrumbs:
+  - title: The Stone Library
+    url: /countertops/
+  - title: Natural Stone
+    url: /countertops/natural-stone/
+eleventyComputed:
+  title: "{{ stone.title | safe }}"
+  description: "{{ stone.description | safe }}"
+---
+
+<div class="page-head page-head--split">
+  <div>
+    <span class="kicker"><a href="/countertops/natural-stone/" style="text-decoration:none">Natural Stone</a> · {{ stone.slug | title }}</span>
+    <h1>{{ stone.heading }}</h1>
+  </div>
+  <p class="lede lede--sm" style="max-width:44ch">{{ stone.lede }}</p>
+</div>
+
+<div class="section" style="padding-top:8px">
+  <div class="grid grid--2" style="gap:56px">
+    {% for s in stone.sections %}
+      <div>
+        <h2 style="margin-bottom:20px">{{ s.heading }}</h2>
+        {% for p in s.paragraphs %}
+          <p class="lede lede--sm" style="margin-bottom:16px">{{ p }}</p>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% set cta = stone.cta %}
+{% include "partials/cross-cta.njk" %}

@@ -213,12 +213,54 @@ collections:
                 fields:
                   - { name: name, label: Name, widget: string }
                   - { name: desc, label: Description, widget: text }
+                  - { name: url, label: Detail Page URL, widget: string, required: false }
               - name: cta
                 label: Call-to-Action
                 widget: object
                 fields:
                   - { name: text, label: Text, widget: string }
                   - { name: button, label: Button Label, widget: string }
+
+      - name: naturalStonePages
+        label: Natural Stone Detail Pages
+        file: src/_data/naturalStonePages.json
+        fields:
+          - name: travertine
+            label: Travertine
+            widget: object
+            fields: &stonePageFields
+              - { name: slug, label: URL Slug, widget: string, hint: "Changing this changes the page address — leave alone unless you know why" }
+              - { name: title, label: SEO Title, widget: string }
+              - { name: description, label: SEO Description, widget: text }
+              - { name: heading, label: Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+              - name: sections
+                label: Content Sections
+                widget: list
+                fields:
+                  - { name: heading, label: Section Heading, widget: string }
+                  - name: paragraphs
+                    label: Paragraphs
+                    widget: list
+                    field: { name: p, label: Paragraph, widget: text }
+              - name: cta
+                label: Call-to-Action
+                widget: object
+                fields:
+                  - { name: text, label: Text, widget: string }
+                  - { name: button, label: Button Label, widget: string }
+          - name: limestone
+            label: Limestone
+            widget: object
+            fields: *stonePageFields
+          - name: slate
+            label: Slate
+            widget: object
+            fields: *stonePageFields
+          - name: onyx
+            label: Onyx
+            widget: object
+            fields: *stonePageFields
 
       - name: tilePage
         label: Tile Page

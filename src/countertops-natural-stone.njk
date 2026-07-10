@@ -19,8 +19,9 @@ breadcrumbs:
 <div class="grid grid--2" style="padding:8px var(--pad-x) 56px; gap:40px">
   {% for s in materialPages.naturalStone.stones %}
     <div class="value">
-      <h3>{{ s.name }}</h3>
+      <h3>{% if s.url %}<a href="{{ s.url }}" style="text-decoration:none;color:inherit">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
       <p>{{ s.desc }}</p>
+      {% if s.url %}<p style="margin-top:10px"><a class="text-link" href="{{ s.url }}">Care &amp; installation →</a></p>{% endif %}
     </div>
   {% endfor %}
 </div>

@@ -7,7 +7,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
-  // Sveltia CMS admin: static page + self-hosted bundle (no CDN at runtime)
+  // Sveltia CMS admin: static page + self-hosted bundle (no CDN at runtime).
+  // Passthrough only — ignored as templates so /admin/ stays out of
+  // collections (and the sitemap).
+  eleventyConfig.ignores.add("src/admin/**");
   eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
   eleventyConfig.addPassthroughCopy({
     "node_modules/@sveltia/cms/dist/sveltia-cms.js": "admin/sveltia-cms.js",
