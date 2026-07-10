@@ -3,7 +3,6 @@
     "label": "Countertops",
     "url": "/countertops/",
     "children": [
-      { "label": "The Stone Library", "url": "/countertops/" },
       { "label": "Quartz", "url": "/countertops/quartz/" },
       { "label": "Granite", "url": "/countertops/granite/" },
       { "label": "Marble", "url": "/countertops/marble/" },
