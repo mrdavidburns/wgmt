@@ -16,10 +16,30 @@ GitHub Actions deploy. Editors sign in with their GitHub account and need
   option (not supported by Decap, so don't swap the bundle for Decap CMS).
 - Uploaded images land in `src/assets/img/`
 
-## One-time auth setup (not yet done)
+## Sign in today: personal access token (no setup)
 
-GitHub sign-in needs a tiny OAuth gateway because GitHub Pages can't run
-server code. Sveltia provides one as a Cloudflare Worker. Steps:
+The "Sign In Using Access Token" button works with no OAuth infrastructure:
+
+1. Create a fine-grained PAT at
+   https://github.com/settings/personal-access-tokens/new —
+   Repository access: **only `mrdavidburns/wgmt`**; Repository permissions:
+   **Contents: Read and write**
+2. `/admin/` → **Sign In Using Access Token** → paste
+
+Good for repo collaborators. Non-technical editors are better served by the
+one-click OAuth flow below.
+
+## Local editing (no auth)
+
+`npm run dev`, open `http://localhost:8080/admin/`, choose **Work with Local
+Repository** — edits write straight to the working tree; commit as usual.
+
+## One-time OAuth setup (not yet done)
+
+The "Sign In with GitHub" button needs a tiny OAuth gateway because GitHub
+Pages can't run server code. Sveltia provides one as a Cloudflare Worker —
+**no domain needs to be on Cloudflare; a free account is enough** (the worker
+runs at `*.workers.dev`, the site stays on GitHub Pages). Steps:
 
 1. **Deploy the worker** — go to
    [sveltia/sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth)
