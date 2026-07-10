@@ -1,0 +1,115 @@
+{#-
+  JSON-LD structured data, emitted on every page.
+  - HomeAndConstructionBusiness: identical sitewide (@id anchor)
+  - WebSite + WebPage: per-page; `schemaType` frontmatter overrides WebPage type
+  - BreadcrumbList: pages with `breadcrumbs` frontmatter (list of {title, url})
+  - review[]: only on /reviews/, mirroring the five-star cards on the page
+-#}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "{{ site.url }}/#business",
+      "name": {{ site.name | dump | safe }},
+      "alternateName": "{{ site.shortName }}",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/img/logo-180.png",
+      "image": "{{ site.url }}/assets/img/og-image.jpg",
+      "description": {{ site.tagline | dump | safe }},
+      "telephone": "+1-610-660-6565",
+      "faxNumber": "+1-610-660-6564",
+      "foundingDate": "{{ site.since }}",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "130 E Lancaster Ave",
+        "addressLocality": "Ardmore",
+        "addressRegion": "PA",
+        "postalCode": "19003",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.0052017,
+        "longitude": -75.2860477
+      },
+      "hasMap": {{ site.showroom.mapsUrl | dump | safe }},
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "17:00" }
+      ],
+      "areaServed": [
+        { "@type": "Place", "name": "Philadelphia Main Line" },
+        { "@type": "Place", "name": "Greater Philadelphia" },
+        { "@type": "AdministrativeArea", "name": "Montgomery County, PA" },
+        { "@type": "AdministrativeArea", "name": "Delaware County, PA" }
+      ],
+      "sameAs": [
+        {{ site.links.facebook | dump | safe }},
+        {{ site.links.instagram | dump | safe }},
+        {{ site.links.x | dump | safe }},
+        {{ site.links.yelp | dump | safe }},
+        {{ site.links.homeadvisor | dump | safe }},
+        {{ site.links.angi | dump | safe }},
+        {{ site.links.google | dump | safe }}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Stone, Tile & Cabinet Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Granite Countertop Fabrication & Installation", "url": "{{ site.url }}/countertops/granite/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Quartz Countertop Fabrication & Installation", "url": "{{ site.url }}/countertops/quartz/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marble Countertop Fabrication & Installation", "url": "{{ site.url }}/countertops/marble/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Natural Stone Countertops (Travertine, Limestone, Slate, Onyx)", "url": "{{ site.url }}/countertops/natural-stone/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tile & Backsplash Installation", "url": "{{ site.url }}/tile/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CAD Cabinet Design & Installation", "url": "{{ site.url }}/cabinets/" } }
+        ]
+      }
+      {%- if page.url == "/reviews/" %},
+      "review": [
+        {%- for r in reviews %}
+        {
+          "@type": "Review",
+          "reviewBody": {{ r.quote | dump | safe }},
+          "author": { "@type": "Person", "name": {{ r.author | dump | safe }} },
+          "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 }
+        }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+      {%- endif %}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": {{ site.name | dump | safe }},
+      "publisher": { "@id": "{{ site.url }}/#business" }
+    },
+    {
+      "@type": "{{ schemaType or 'WebPage' }}",
+      "@id": "{{ site.url }}{{ page.url }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "name": {{ (title or site.name) | dump | safe }},
+      "description": {{ (description or site.tagline) | dump | safe }},
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "about": { "@id": "{{ site.url }}/#business" },
+      "inLanguage": "en-US"
+    }
+    {%- if breadcrumbs %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+        {%- for b in breadcrumbs %}
+        { "@type": "ListItem", "position": {{ loop.index + 1 }}, "name": {{ b.title | dump | safe }}, "item": "{{ site.url }}{{ b.url }}" },
+        {%- endfor %}
+        { "@type": "ListItem", "position": {{ (breadcrumbs | length) + 2 }}, "name": {{ title | dump | safe }} }
+      ]
+    }
+    {%- endif %}
+  ]
+}
+</script>
