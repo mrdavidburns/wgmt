@@ -200,3 +200,36 @@ collections:
               - { name: desc, label: Description, widget: string }
               - { name: logo, label: Logo, widget: image }
               - { name: url, label: Catalog URL, widget: string }
+
+      - name: serviceAreas
+        label: Service Areas Page
+        file: src/_data/serviceAreas.json
+        fields:
+          - name: intro
+            label: Intro
+            widget: object
+            fields:
+              - { name: heading, label: Page Heading, widget: string }
+              - { name: lede, label: Intro Text, widget: text }
+          - name: regions
+            label: Regions
+            widget: list
+            fields:
+              - { name: name, label: Region Name, widget: string }
+              - { name: blurb, label: Blurb, widget: text }
+              - { name: towns, label: Towns, widget: string, hint: "Separate towns with · (middle dot)" }
+          - { name: mapHeading, label: Map Section Heading, widget: string }
+          - { name: faqHeading, label: FAQ Section Heading, widget: string }
+          - name: faq
+            label: FAQs
+            widget: list
+            hint: "Also published as FAQ structured data for Google and AI search"
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer, widget: text }
+          - name: cta
+            label: Bottom Call-to-Action
+            widget: object
+            fields:
+              - { name: text, label: Text, widget: string }
+              - { name: button, label: Button Label, widget: string }

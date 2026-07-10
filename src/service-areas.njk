@@ -3,44 +3,23 @@ layout: layouts/base.njk
 title: Service Areas — Philadelphia, Main Line, Delaware, Chester, Montgomery & Bucks Counties
 description: Countertop fabrication and installation across Greater Philadelphia — the Main Line, Delaware County, Chester County, Montgomery County, Bucks County, and the city itself.
 permalink: /service-areas/
-faq:
-  - q: Do you install countertops in Philadelphia?
-    a: Yes. We fabricate granite, quartz, and marble countertops at our own shop in Lansdowne and install throughout Philadelphia — Chestnut Hill, Manayunk, Center City, and the surrounding neighborhoods.
-  - q: Do you serve Delaware County?
-    a: Yes — our fabrication shop is in Lansdowne, in the heart of Delaware County. We install in Media, Havertown, Springfield, Newtown Square, Drexel Hill, and across the county.
-  - q: Do you serve Chester County?
-    a: Yes. We regularly install countertops, tile, and cabinets in West Chester, Malvern, Paoli, and throughout Chester County.
-  - q: Do you install in Bucks County?
-    a: Yes. Bucks County projects — Doylestown, Newtown, Yardley, and nearby — are within our regular installation range.
-  - q: Where can I see slabs in person?
-    a: Our showroom at 130 E Lancaster Ave in Ardmore displays full-size quartz, granite, marble, and natural stone slabs, plus our Daltile tile selection and cabinet door lines. Open Monday through Saturday, Sunday by appointment.
-  - q: Is there a charge for estimates?
-    a: No — estimates are free. Tell us about your project and we call back within one business day, usually the same afternoon.
 ---
 
 <div class="page-head page-head--split">
   <div>
     <span class="kicker">Service Areas</span>
-    <h1>One shop, one crew — all over Greater Philadelphia.</h1>
+    <h1>{{ serviceAreas.intro.heading }}</h1>
   </div>
-  <p class="lede lede--sm" style="max-width:44ch">We cut every slab at our own shop in Lansdowne and template every job ourselves. That radius covers the Main Line, Philadelphia, and the four surrounding counties.</p>
+  <p class="lede lede--sm" style="max-width:44ch">{{ serviceAreas.intro.lede }}</p>
 </div>
 
 <div class="section">
   <div class="grid grid--3" style="gap:40px">
-    {% set areas = [
-      ["The Main Line", "Home turf. Our showroom sits on Lancaster Avenue in Ardmore, and we&rsquo;ve installed kitchens and baths here since " + site.since + ".", "Ardmore · Bryn Mawr · Villanova · Wayne · Haverford · Wynnewood · Narberth · Radnor"],
-      ["Delaware County", "Our fabrication shop is in Lansdowne, so Delco installs are minutes from where the stone is cut.", "Media · Havertown · Springfield · Newtown Square · Drexel Hill · Lansdowne · Broomall"],
-      ["Philadelphia", "Rowhome galley kitchens to Chestnut Hill estates — we template, fabricate, and install across the city.", "Chestnut Hill · Manayunk · Roxborough · East Falls · Center City · South Philly"],
-      ["Montgomery County", "A short run up the Schuylkill from the showroom, covered by the same crew and the same lifetime warranty.", "King of Prussia · Conshohocken · Blue Bell · Plymouth Meeting · Norristown · Ambler"],
-      ["Chester County", "Kitchens, baths, and commercial spaces west along the Route 30 and 202 corridors.", "West Chester · Malvern · Paoli · Exton · Berwyn · Kennett Square"],
-      ["Bucks County", "Regular installation territory north of the city, from the river towns to Doylestown.", "Doylestown · Newtown · Yardley · New Hope · Langhorne · Warrington"]
-    ] %}
-    {% for a in areas %}
+    {% for a in serviceAreas.regions %}
       <div class="value">
-        <h3>{{ a[0] }}</h3>
-        <p>{{ a[1] | safe }}</p>
-        <p style="font-size:13px;color:var(--muted);margin-top:8px">{{ a[2] }}</p>
+        <h3>{{ a.name }}</h3>
+        <p>{{ a.blurb }}</p>
+        <p style="font-size:13px;color:var(--muted);margin-top:8px">{{ a.towns }}</p>
       </div>
     {% endfor %}
   </div>
@@ -48,7 +27,7 @@ faq:
 
 <div class="section" style="padding-bottom:0">
   <div class="section-head">
-    <h2>Start from the showroom</h2>
+    <h2>{{ serviceAreas.mapHeading }}</h2>
     <p class="lede lede--sm" style="max-width:44ch">{{ site.showroom.address1 }}, {{ site.showroom.address2 }} · {{ site.showroom.hours1 }} · {{ site.showroom.hours2 }} · <a href="{{ site.showroom.mapsUrl }}" target="_blank" rel="noopener">Get directions</a></p>
   </div>
 </div>
@@ -57,7 +36,7 @@ faq:
 </div>
 
 <div class="section">
-  <h2 style="margin-bottom:36px">Common questions</h2>
+  <h2 style="margin-bottom:36px">{{ serviceAreas.faqHeading }}</h2>
   <div class="grid grid--3" style="gap:40px">
     {% for f in faq %}
       <div class="value">
@@ -68,5 +47,5 @@ faq:
   </div>
 </div>
 
-{% set cta = { text: "In our area? Estimates are free and the callback is fast.", button: "Get a Free Estimate" } %}
+{% set cta = { text: serviceAreas.cta.text, button: serviceAreas.cta.button } %}
 {% include "partials/cross-cta.njk" %}

@@ -1,0 +1,70 @@
+{
+  "intro": {
+    "heading": "One shop, one crew — all over Greater Philadelphia.",
+    "lede": "We cut every slab at our own shop in Lansdowne and template every job ourselves. That radius covers the Main Line, Philadelphia, and the four surrounding counties."
+  },
+  "regions": [
+    {
+      "name": "The Main Line",
+      "blurb": "Home turf. Our showroom sits on Lancaster Avenue in Ardmore, and we've installed kitchens and baths here since 2001.",
+      "towns": "Ardmore · Bryn Mawr · Villanova · Wayne · Haverford · Wynnewood · Narberth · Radnor"
+    },
+    {
+      "name": "Delaware County",
+      "blurb": "Our fabrication shop is in Lansdowne, so Delco installs are minutes from where the stone is cut.",
+      "towns": "Media · Havertown · Springfield · Newtown Square · Drexel Hill · Lansdowne · Broomall"
+    },
+    {
+      "name": "Philadelphia",
+      "blurb": "Rowhome galley kitchens to Chestnut Hill estates — we template, fabricate, and install across the city.",
+      "towns": "Chestnut Hill · Manayunk · Roxborough · East Falls · Center City · South Philly"
+    },
+    {
+      "name": "Montgomery County",
+      "blurb": "A short run up the Schuylkill from the showroom, covered by the same crew and the same lifetime warranty.",
+      "towns": "King of Prussia · Conshohocken · Blue Bell · Plymouth Meeting · Norristown · Ambler"
+    },
+    {
+      "name": "Chester County",
+      "blurb": "Kitchens, baths, and commercial spaces west along the Route 30 and 202 corridors.",
+      "towns": "West Chester · Malvern · Paoli · Exton · Berwyn · Kennett Square"
+    },
+    {
+      "name": "Bucks County",
+      "blurb": "Regular installation territory north of the city, from the river towns to Doylestown.",
+      "towns": "Doylestown · Newtown · Yardley · New Hope · Langhorne · Warrington"
+    }
+  ],
+  "mapHeading": "Start from the showroom",
+  "faqHeading": "Common questions",
+  "faq": [
+    {
+      "q": "Do you install countertops in Philadelphia?",
+      "a": "Yes. We fabricate granite, quartz, and marble countertops at our own shop in Lansdowne and install throughout Philadelphia — Chestnut Hill, Manayunk, Center City, and the surrounding neighborhoods."
+    },
+    {
+      "q": "Do you serve Delaware County?",
+      "a": "Yes — our fabrication shop is in Lansdowne, in the heart of Delaware County. We install in Media, Havertown, Springfield, Newtown Square, Drexel Hill, and across the county."
+    },
+    {
+      "q": "Do you serve Chester County?",
+      "a": "Yes. We regularly install countertops, tile, and cabinets in West Chester, Malvern, Paoli, and throughout Chester County."
+    },
+    {
+      "q": "Do you install in Bucks County?",
+      "a": "Yes. Bucks County projects — Doylestown, Newtown, Yardley, and nearby — are within our regular installation range."
+    },
+    {
+      "q": "Where can I see slabs in person?",
+      "a": "Our showroom at 130 E Lancaster Ave in Ardmore displays full-size quartz, granite, marble, and natural stone slabs, plus our Daltile tile selection and cabinet door lines. Open Monday through Saturday, Sunday by appointment."
+    },
+    {
+      "q": "Is there a charge for estimates?",
+      "a": "No — estimates are free. Tell us about your project and we call back within one business day, usually the same afternoon."
+    }
+  ],
+  "cta": {
+    "text": "In our area? Estimates are free and the callback is fast.",
+    "button": "Get a Free Estimate"
+  }
+}
