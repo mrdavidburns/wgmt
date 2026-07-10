@@ -19,5 +19,15 @@
     "note": "By appointment only"
   },
   "topbarNote": "Mon–Sat · Sun by appt",
-  "since": "2001"
+  "since": "2001",
+  "links": {
+    "tour360": "https://www.google.com/maps/place/Wholesale+Granite+Marble+%26+Tile/@40.0052017,-75.2860477,3a,75y,213.7h,96.98t/data=!3m7!1e1!3m5!1sWdGPTBGgy2wAAAQYHnQSWQ!2e0!3e2!7i13312!8i6656!4m2!3m1!1s0x0:0x2eb46bc0498707ed!6m1!1e1",
+    "google": "https://maps.google.com/?cid=3365433295164082157",
+    "yelp": "https://www.yelp.com/biz/wholesale-granite-marble-and-tile-ardmore-2",
+    "homeadvisor": "https://www.homeadvisor.com/rated.WholesaleGraniteMarble.15582810.html",
+    "angi": "https://www.angi.com/companylist/us/pa/ardmore/wholesale-granite-marble-and-tile-inc-reviews-2200575.htm",
+    "facebook": "https://www.facebook.com/Wholesale-Granite-Marble-Tile-208813692491633/",
+    "instagram": "https://www.instagram.com/wholesalegmt/",
+    "x": "https://x.com/wholesalegmt"
+  }
 }
