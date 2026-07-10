@@ -14,7 +14,8 @@ eleventyExcludeFromCollections: true
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="{{ site.url }}{{ r.to }}">
-  <meta http-equiv="refresh" content="0; url={{ r.to | htmlBaseUrl }}">
+  {#- HtmlBasePlugin rewrites the refresh URL with the path prefix — don't add it manually. -#}
+  <meta http-equiv="refresh" content="0; url={{ r.to }}">
   <title>Redirecting…</title>
 </head>
 <body>
