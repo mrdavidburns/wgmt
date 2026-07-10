@@ -3,6 +3,7 @@
   - HomeAndConstructionBusiness: identical sitewide (@id anchor)
   - WebSite + WebPage: per-page; `schemaType` frontmatter overrides WebPage type
   - BreadcrumbList: pages with `breadcrumbs` frontmatter (list of {title, url})
+  - FAQPage: pages with `faq` frontmatter (list of {q, a})
   - review[]: only on /reviews/, mirroring the five-star cards on the page
 -#}
 <script type="application/ld+json">
@@ -43,9 +44,12 @@
       ],
       "areaServed": [
         { "@type": "Place", "name": "Philadelphia Main Line" },
+        { "@type": "City", "name": "Philadelphia, PA" },
         { "@type": "Place", "name": "Greater Philadelphia" },
         { "@type": "AdministrativeArea", "name": "Montgomery County, PA" },
-        { "@type": "AdministrativeArea", "name": "Delaware County, PA" }
+        { "@type": "AdministrativeArea", "name": "Delaware County, PA" },
+        { "@type": "AdministrativeArea", "name": "Chester County, PA" },
+        { "@type": "AdministrativeArea", "name": "Bucks County, PA" }
       ],
       "sameAs": [
         {{ site.links.facebook | dump | safe }},
@@ -98,6 +102,21 @@
       "about": { "@id": "{{ site.url }}/#business" },
       "inLanguage": "en-US"
     }
+    {%- if faq %},
+    {
+      "@type": "FAQPage",
+      "@id": "{{ site.url }}{{ page.url }}#faq",
+      "mainEntity": [
+        {%- for f in faq %}
+        {
+          "@type": "Question",
+          "name": {{ f.q | dump | safe }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ f.a | dump | safe }} }
+        }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
     {%- if breadcrumbs %},
     {
       "@type": "BreadcrumbList",
